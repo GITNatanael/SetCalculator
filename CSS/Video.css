@@ -1,0 +1,22 @@
+
+#ContenedorSets video {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: scale-down;
+  transition: opacity 0.5s ease;
+}
+
+.Tarjeta video{
+  width: 2.5rem;
+  height: 2rem;
+  flex-shrink: 0;
+}
+
+#Producto-AXB{
+  width: 3.5rem;
+  height: 3rem;
+}

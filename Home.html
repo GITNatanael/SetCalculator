@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <!-- Css -->
+        <link rel="stylesheet" type= "text/css" href="./CSS/home.css">
+        <link rel="stylesheet" type= "text/css" href="./CSS/Results.css">
+        <link rel="stylesheet" type= "text/css" href="./CSS/SetCards.css">
+        <link rel="stylesheet" type= "text/css" href="./CSS/Video.css">
+        <link rel="stylesheet" type= "text/css" href="./CSS/Loaders.css">
+        <link rel="stylesheet" type= "text/css" href="./CSS/Menu.css">
+        
+        <!-- Jquey -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body >
+    <header>
+        <div class="Header" >
+            <h1>X</h1>
+            <img src="./Assets/Logo.png" alt="Logo" class="Logo">
+            <nav class="mynav">
+                <ul class="menu-list">
+                  <li class="menu-active"><a href="" class="menu-active">HOME</a></li>
+                  <li><a href="">+2</a></li>
+                  <li><a href="">ABOUT</a></li>
+                  <li><a href="">CONTACT</a></li>
+                </ul>
+              </nav>
+              <span class="target"></span>
+        </div>
+    </header>
+
+
+    <div class="container " id="Grid2">
+        <div class="Instructions" id="Instructions">
+            <div class="top">SET</div>
+            <div class="bottom">OPERATOR</div>
+       </div>
+    
+        <div id="ContenedorSets">
+            <div class="Expand-icon"><img src="./Assets/Expand Icon.svg" alt="Expand icon"><br>Edit</div>
+
+                <video autoplay loop muted>
+                    <source src="./Assets/UnionSpheres0001-0030.mp4" type="video/mp4">
+                </video>
+<!-- Conjunto 1 -->            
+        <div class="card SetA " id="SetA">
+            <div class="circle" id="Contenedor_Izquierdo"></div>
+            <div class="Close-Button"><img src="./Assets/Cancel-Button.svg" alt="Cancel Btn"></div>
+            <div class="Cardinalidad"><div class="Cardinality-Value"></div><div class="Cardinality-Title">Cardinality</div></div>
+            <div class="content">
+                <div class="OutputCard"><p class="output" id="OutputA"></p></div>
+                <div class="Div-Textbox">
+                    <input class="Textbox" placeholder="Type something, e.x: &quot churros &quot..." 
+                    type="text" id="TextboxA"  name="Textbox"  onkeyup.enter="fun1()">
+                    <divc class="Conection-Textbox-Button"></divc>
+                    <div class="Button-Add" id="Button-Add-A"> <img src="./Assets/Send-Button.svg" alt="Send-Button"></div>
+                </div>  
+            </div>
+            <p class="SetName">Set A</p>
+        </div>
+<!-- Conjunto 1 -->
+<!-- Conjunto 2 -->
+        <div class="card SetB" id="SetB">
+            <div class="circle" id="Contenedor_Derecho"> </div>
+            <div class="Close-Button"><img src="./Assets/Cancel-Button.svg" alt="Cancel Btn"></div>
+            <div class="Cardinalidad"><div class="Cardinality-ValueB"></div><div class="Cardinality-Title">Cardinality</div></div>
+            <div class="content">
+                <div class="OutputCard"><p class="output" id="OutputB"></p></div>
+                <div class="Div-Textbox">
+                    <input class="Textbox" placeholder="Type something..." type="text" id="TextboxB" name="Textbox2" required minlength="4" maxlength="50" size="10">
+                    <divc class="Conection-Textbox-Button"></divc>
+                    <div class="Button-Add" id="Button-Add-B"> <img src="./Assets/Send-Button.svg" alt="Send-Button"></div>
+                </div>
+            </div>
+            <p class="SetName">Set B</p>
+        </div>
+ <!-- Conjunto 2 -->
+        </div> 
+        <div class="ButtonDiv"> 
+            <div id="btn3">
+                <div class="jelly"></div>
+                <svg width="0" height="0" class="jelly-maker">
+                  <defs>
+                    <filter id="uib-jelly-ooze">
+                      <feGaussianBlur in="SourceGraphic" stdDeviation="6.25" result="blur"></feGaussianBlur>
+                      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="ooze"></feColorMatrix>
+                      <feBlend in="SourceGraphic" in2="ooze"></feBlend>
+                    </filter>
+                  </defs>
+                </svg>
+                <p>Operate</p>
+            </div>
+        </div>  
+        <!-- <div class="Resultados-Help-Text" id="Home-Dialogues">
+        </div> -->
+
+         <!-- Div del contenedor que contiene los Cards -->
+         
+<!-- Operaciones -->
+<div  id="ContenedorOperaciones">
+                                            
+    <div class="Resultados-Column-Right">   <!-- Columna DERECHA -->
+        <div class="Resultados-Filter">
+            <div class="Showing-now"> showing now</div>
+            <div class="Element" data-target="Union">Union</div>
+            <div class="Element" data-target="Interseccion">Intersección</div>
+            <div class="Element" data-target="Diferencia">Diferencia</div>
+            <div class="Element" data-target="Disjoint">Disjoint</div>
+            <div class="Element" data-target="Diferencia-Simetrica">Diferencia Simetrica</div>
+            <div class="Element" data-target="Producto-Cartesiano">Producto Cartesiano</div>
+        </div>
+        
+        <div class="Resultados-Help-Text" id="dialogo">
+        </div>
+    </div> 
+    <div class="Resultados-Column-Left">    <!-- Columna IZQUIERDA -->
+        <div class="Resultados-Grid-Superior" > results    </div>
+        <div class="Resultados-Grid-Inferior" >
+<!-- Div Union -->   
+            <div class="Tarjeta  " id="Union" >
+                <div class="Tarjeta-Header">
+                    <div class="Texto-NombreOperacion">
+                        <video autoplay loop muted>
+                            <source src="./Assets/Union.mp4" type="video/mp4">
+                        </video>
+                        <div class="Operator">Union</div>  
+                    </div>
+                    <div class="Info-icon">
+                        <img src="./Assets/Info_icon.svg" alt="Info icon">
+                    </div>   
+                </div>
+                <div class="OutputCard Result"><p class="output-operations" id="OutputUnion"></p></div>
+                <div class="Tarjeta-Footer">
+                    <div class="img-container"><img src="./Assets/Copy-Icon.svg" alt="Copy" class="copy-button"></div>
+                    <span class="copied-text">Copied</span>
+                    <span class="copy-text">Copy</span>
+                </div> 
+            </div>
+<!-- Div Intersección -->
+            <div class="Tarjeta " id="Interseccion" >
+                <div class="Tarjeta-Header">
+                    <div class="Texto-NombreOperacion">
+                        <video autoplay loop muted>
+                            <source src="./Assets/Interseccion.mp4" type="video/mp4">
+                        </video>
+                        <div class="Operator">Intersection</div>                   
+                    </div>
+                    <div class="Info-icon">
+                        <img src="./Assets/Info_icon.svg" alt="Info icon">
+                    </div>
+                </div>
+                <div class="OutputCard Result"><p class="output-operations" id="OutputIntersection"></p></div>
+                <div class="Tarjeta-Footer">  
+                    <div class="img-container"><img src="./Assets/Copy-Icon.svg" alt="Copy" class="copy-button"></div> 
+                    <span class="copied-text">Copied</span>
+                    <span class="copy-text">Copy</span>
+                </div> 
+            </div>
+<!-- Div Diferencia Simetrica -->
+            <div class="Tarjeta " id="Diferencia-Simetrica" >
+                <div class="Tarjeta-Header">
+                    <div class="Texto-NombreOperacion">
+                        <video autoplay loop muted>
+                            <source src="./Assets/Diferencia Simetrica.mp4" type="video/mp4">
+                        </video>
+                        <div class="Operator">Symmetric Difference</div>                   
+                    </div>
+                    <div class="Info-icon">
+                        <img src="./Assets/Info_icon.svg" alt="Info icon">
+                    </div>
+                </div>
+                <div class="OutputCard Result"><p class="output-operations" id="OutputSymmetricDifference"></p></div>
+                <div class="Tarjeta-Footer">  
+                    <div class="img-container"><img src="./Assets/Copy-Icon.svg" alt="Copy" class="copy-button"></div>
+                    <span class="copied-text">Copied</span>
+                    <span class="copy-text">Copy</span>
+                </div> 
+            </div>
+<!-- Div Diferencia -->
+            <div class="Tarjeta " id="Diferencia" >
+                
+                <div class="Tarjeta-Header">
+                    <div class="Texto-NombreOperacion">
+                        <video autoplay loop muted>
+                            <source src="./Assets/Diferencia A-B.mp4" type="video/mp4">
+                        </video>
+                        <div class="Operator">Difference A-B</div>                     
+                    </div>
+                    <div class="Info-icon">
+                        <img src="./Assets/Info_icon.svg" alt="Info icon">
+                    </div>
+                </div>
+                <div class="OutputCard Result"><p class="output-operations" id="OutputSetDifferenceA"></p></div>
+                <div class="Texto-NombreOperacion">
+                    <video autoplay loop muted>
+                        <source src="./Assets/Diferencia B-A.mp4" type="video/mp4">
+                    </video>
+                    <div class="Operator">Difference B-A</div> 
+                </div>
+                <div class="OutputCard Result"><p class="output-operations" id="OutputSetDifferenceB"></p></div>
+                <div class="Tarjeta-Footer">  
+                    <div class="img-container"><img src="./Assets/Copy-Icon.svg" alt="Copy" class="copy-button"></div>
+                    <span class="copied-text">Copied</span>
+                    <span class="copy-text">Copy</span>
+                </div> 
+            </div>
+<!-- Div Disjoint -->
+            <div class="Tarjeta " id="Disjoint" >
+                <div class="Tarjeta-Header">
+                    <div class="Texto-NombreOperacion">
+                        <video autoplay loop muted id="Producto-AXB">
+                            <source src="./Assets/Disjoint.mp4" type="video/mp4">
+                        </video>
+                        <div class="Operator">Disjoint</div>                    
+                    </div>
+                    <div class="Info-icon">
+                        <img src="./Assets/Info_icon.svg" alt="Info icon">
+                    </div>
+                </div>
+                <div class="OutputCard Result"><p class="output-operations" id="OutputDisjointness"></p></div>
+                <div class="Tarjeta-Footer">  
+                    <div class="img-container"><img src="./Assets/Copy-Icon.svg" alt="Copy" class="copy-button"></div>
+                    <span class="copied-text">Copied</span>
+                    <span class="copy-text">Copy</span>
+                </div> 
+            </div>
+<!-- Div Producto Cartesiano -->
+            <div class="Tarjeta " id="Producto-Cartesiano" >
+                <div class="Tarjeta-Header">
+                    <div class="Texto-NombreOperacion">
+                        <video autoplay loop muted id="Producto-AXB">
+                            <source src="./Assets/Producto AXB.mp4" type="video/mp4">
+                        </video>
+                        <div class="Operator">Cartesian Product</div>                     
+                    </div>
+                    <div class="Info-icon">
+                        <img src="./Assets/Info_icon.svg" alt="Info icon">
+                    </div>
+                </div>
+                <div class="OutputCard Result"><p class="output-operations" id="OutputCartesianProduct"></p></div>
+                <div class="Tarjeta-Footer"> 
+                    <div class="img-container"><img src="./Assets/Copy-Icon.svg" alt="Copy" class="copy-button"></div>
+                    <span class="copied-text">Copied</span>
+                    <span class="copy-text">Copy</span>
+                </div> 
+            </div>
+
+            </div>
+<!-- REPETIDOS --> 
+            <div class="Resultados-Grid-Inferior-FILTRO" >
+    <!-- Div Union HIDDEN-->   
+                <div class="Tarjeta hidden" id="Union" >
+                    <div class="Tarjeta-Header">
+                        <div class="Texto-NombreOperacion">
+                            <video autoplay loop muted>
+                                <source src="./Assets/Union.mp4" type="video/mp4">
+                            </video>
+                            <div class="Operator">Union</div>  
+                        </div>
+                        <div class="Info-icon">
+                            <img src="./Assets/Info_icon.svg" alt="Info icon">
+                        </div>   
+                    </div>
+                    <div class="OutputCard Result"><p class="output-operations" id="OutputUnion"></p></div>
+                    <div class="Tarjeta-Footer">  
+                        <div class="img-container"><img src="./Assets/Copy-Icon.svg" alt="Copy" class="copy-button"></div> 
+                        <span class="copied-text">Copied</span>
+                        <span class="copy-text">Copy</span>
+                    </div> 
+            </div>
+    <!-- Div Intersección HIDDEN-->
+            <div class="Tarjeta hidden" id="Interseccion" >
+                <div class="Tarjeta-Header">
+                    <div class="Texto-NombreOperacion">
+                        <video autoplay loop muted>
+                            <source src="./Assets/Interseccion.mp4" type="video/mp4">
+                        </video>
+                        <div class="Operator">Intersection</div>                   
+                    </div>
+                    <div class="Info-icon">
+                        <img src="./Assets/Info_icon.svg" alt="Info icon">
+                    </div>
+                </div>
+                <div class="OutputCard Result"><p class="output-operations" id="OutputIntersection"></p></div>
+                <div class="Tarjeta-Footer">  
+                    <div class="img-container"><img src="./Assets/Copy-Icon.svg" alt="Copy" class="copy-button"></div> 
+                    <span class="copied-text">Copied</span>
+                    <span class="copy-text">Copy</span>
+                </div>  
+            </div>
+    <!-- Div Diferencia Simetrica HIDDEN-->
+            <div class="Tarjeta hidden" id="Diferencia-Simetrica" >
+                <div class="Tarjeta-Header">
+                    <div class="Texto-NombreOperacion">
+                        <video autoplay loop muted>
+                            <source src="./Assets/Diferencia Simetrica.mp4" type="video/mp4">
+                        </video>
+                        <div class="Operator">Symmetric Difference</div>                   
+                    </div>
+                    <div class="Info-icon">
+                        <img src="./Assets/Info_icon.svg" alt="Info icon">
+                    </div>
+                </div>
+                <div class="OutputCard Result"><p class="output-operations" id="OutputSymmetricDifference"></p></div>
+                <div class="Tarjeta-Footer">  
+                    <div class="img-container"><img src="./Assets/Copy-Icon.svg" alt="Copy" class="copy-button"></div> 
+                    <span class="copied-text">Copied</span>
+                    <span class="copy-text">Copy</span>
+                </div> 
+            </div>
+    <!-- Div Diferencia HIDDEN-->
+            <div class="Tarjeta hidden" id="Diferencia" >
+                
+                <div class="Tarjeta-Header">
+                    <div class="Texto-NombreOperacion">
+                        <video autoplay loop muted>
+                            <source src="./Assets/Diferencia A-B.mp4" type="video/mp4">
+                        </video>
+                        <div class="Operator">Difference A-B</div>                     
+                    </div>
+                    <div class="Info-icon">
+                        <img src="./Assets/Info_icon.svg" alt="Info icon">
+                    </div>
+                </div>
+                <div class="OutputCard Result"><p class="output-operations" id="OutputSetDifferenceA"></p></div>
+                <div class="Texto-NombreOperacion">
+                    <video autoplay loop muted>
+                        <source src="./Assets/Diferencia B-A.mp4" type="video/mp4">
+                    </video>
+                    <div class="Operator">Difference B-A</div> 
+                </div>
+                <div class="OutputCard Result"><p class="output-operations" id="OutputSetDifferenceB"></p></div>
+                <div class="Tarjeta-Footer">  
+                    <div class="img-container"><img src="./Assets/Copy-Icon.svg" alt="Copy" class="copy-button"></div> 
+                    <span class="copied-text">Copied</span>
+                    <span class="copy-text">Copy</span>
+                </div> 
+            </div>
+    <!-- Div Disjoint HIDDEN-->
+            <div class="Tarjeta hidden" id="Disjoint" >
+                <div class="Tarjeta-Header">
+                    <div class="Texto-NombreOperacion">
+                        <video autoplay loop muted id="Producto-AXB">
+                            <source src="./Assets/Disjoint.mp4" type="video/mp4">
+                        </video>
+                        <div class="Operator">Disjoint</div>                    
+                    </div>
+                    <div class="Info-icon">
+                        <img src="./Assets/Info_icon.svg" alt="Info icon">
+                    </div>
+                </div>
+                <div class="OutputCard Result"><p class="output-operations" id="OutputDisjointness"></p></div>
+                <div class="Tarjeta-Footer">  
+                    <div class="img-container"><img src="./Assets/Copy-Icon.svg" alt="Copy" class="copy-button"></div> 
+                    <span class="copied-text">Copied</span>
+                    <span class="copy-text">Copy</span>
+                </div> 
+            </div>
+    <!-- Div Producto Cartesiano HIDDEN-->
+            <div class="Tarjeta hidden" id="Producto-Cartesiano" >
+                <div class="Tarjeta-Header">
+                    <div class="Texto-NombreOperacion">
+                        <video autoplay loop muted id="Producto-AXB">
+                            <source src="./Assets/Producto AXB.mp4" type="video/mp4">
+                        </video>
+                        <div class="Operator">Cartesian Product</div>                     
+                    </div>
+                    <div class="Info-icon">
+                        <img src="./Assets/Info_icon.svg" alt="Info icon">
+                    </div>
+                </div>
+                <div class="OutputCard Result"><p class="output-operations" id="OutputCartesianProduct"></p></div>
+                <div class="Tarjeta-Footer">  
+                    <div class="img-container"><img src="./Assets/Copy-Icon.svg" alt="Copy" class="copy-button"></div> 
+                    <span class="copied-text">Copied</span>
+                    <span class="copy-text">Copy</span>
+                </div>  
+            </div>
+                
+            </div> <!-- Fin del Contendor de cards Filtradas -->
+        </div>
+    </div>
+</div><!-- Fin del Contendor de #Grid2-->
+
+
+
+
+   <!-- carga el archivo Three.js -->
+   <script src="https://cdn.jsdelivr.net/npm/three@0.152.0/build/three.min.js"></script> 
+   <script src="./Scripts/3DBlackSphere.js" ></script>
+   <script src="./Scripts/3DWhiteSphere.js" ></script>
+   <script src="./Scripts/EventoEncogerButton.js" ></script>
+   <script src="./Scripts/Filtro.js" ></script>
+   <script src="./Scripts/Dialogos.js"></script>
+   <script src="./Scripts/CopyButton.js"></script>
+   <script src="./Scripts/Menu.js"></script>
+
+        <!-- /* Javascript */  -->
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+</body>
+
+<script src="./Scripts/HomeScript.js"></script>
+
+</html>

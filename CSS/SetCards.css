@@ -1,0 +1,372 @@
+/*Estilos del contenedor de las tarjetas*/
+
+.card {
+  position: relative;
+  height: 300px;
+  width: 350px;
+  border-radius: 10px;
+  display: flex;
+  /*align-items: end;*/
+  transition: 0.5s;
+  justify-content: start;
+  flex-grow: 1;
+  width: auto;
+  overflow: hidden;
+}
+
+.card:not(.disable-hover):hover {
+  flex-grow: 2;
+  min-width: 600px;
+  max-width: 600px;
+  backdrop-filter: none;
+}
+
+.card.active {
+  flex-grow: 2;
+  min-width: 600px;
+  max-width: 600px;
+}
+
+.card.circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card .circle::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  clip-path: circle(120px at center);
+  transition: 0.5s;
+}
+
+/* Contenedor del Output y el input textbox */
+.card .content {
+  overflow: hidden;
+  background-color: transparent;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 50%;
+  left: 20%;
+  padding: 1rem 2rem;
+  padding-top: 2rem;
+  transition: 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 41;
+  overflow: hidden;
+}
+
+.card:not(.disable-hover):hover .content {
+  left: 0;
+  opacity: 1;
+  visibility: visible;
+  display: flex;
+}
+
+.card.active .content {
+  left: 0;
+  opacity: 1;
+  visibility: visible;
+  display: flex;
+}
+
+/*CARDS*/
+.card:not(.disable-hover):hover .circle::before {
+  background: white;
+  width: 100%;
+  clip-path: circle(400px at center);
+  border-radius: 10px;
+  z-index: 41;
+}
+
+.card.active .circle::before {
+  background: white;
+  width: 100%;
+  clip-path: circle(400px at center);
+  border-radius: 10px;
+  z-index: 41;
+}
+
+.card.SetA:not(.disable-hover):hover .circle::before {
+  background: #0B0B0B;
+}
+
+.card.SetA.active .circle::before {
+  background: #0B0B0B;
+  width: 100%;
+  clip-path: circle(400px at center);
+  border-radius: 10px;
+  z-index: 41;
+}
+
+/* OUTPUTS */
+.OutputCard{
+  display:grid;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  margin-bottom: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.OutputCard img{
+  width: 0.5rem;
+  height: 0.5rem;
+  padding: 0.25rem;
+  margin-left: 1rem;
+  margin-right: 0.2rem;
+}
+.OutputCard img:hover{
+  background-color: #F1F1F1;
+  border-radius: 100%;
+}
+.OutputCard img:hover + span{
+  text-decoration: line-through;
+}
+.SetA .OutputCard {
+  color: white;
+}
+.SetA .OutputCard img{
+  filter: invert(100%);
+}
+.SetA .OutputCard img:hover{
+  filter: none;
+}
+
+.SetB .OutputCard {
+  color: black;
+}
+
+/*TITULOS*/
+.card .SetName {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: 0.5s;
+  color: white;
+  font-size: 3.9em;
+  font-family: 'PrincipalFont', sans-serif;
+  z-index: 41;
+  filter: drop-shadow(0 1px 3px);
+}
+
+.card:not(.disable-hover):hover .SetName {
+  left: 78%;
+  color: black;
+  z-index: 41;
+  text-shadow: none;
+  filter: none;
+}
+
+.card.active .SetName {
+  left: 78%;
+  color: black;
+  z-index: 41;
+  filter: none;
+}
+
+.card.SetA .SetName {
+  color: white;
+}
+
+.card.SetA:not(.disable-hover):hover .SetName {
+  left: 78%;
+  color: white;
+  z-index: 41;
+  text-shadow: none;
+}
+
+
+
+
+
+/* Configuraciones de las entradas de datos de los conjuntos: textboxs, botones,etc
+ */
+.Div-Textbox{
+  width: 100%;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
+  padding: 0rem 0.2rem;
+  gap: 0.5rem;
+
+}
+.SetA .Textbox{
+  background-color: #F1F1F1;
+  color: black;
+}
+.Textbox{
+  height: 100%;
+  width: 100%;
+  border: none;
+  border-radius: 50px;
+  padding: 0rem 1rem;
+  background-color: #262626;
+  color: white;
+}
+.Textbox:focus {
+  outline: none;
+}
+.SetA .Div-Textbox::before{
+  background-color: #F1F1F1;
+}
+.Div-Textbox::before{
+  content: "";
+  display: flex;
+  background-color: #262626;
+  height: 1rem;
+  width: 70%;
+  margin: 1rem;
+  position: absolute;
+  z-index: -1;
+}
+.SetA .Button-Add{
+  background-color: #F1F1F1;;
+}
+.Button-Add{
+  background-color: #262626;
+  height: 2.5rem;
+  width: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+ 
+}
+.Button-Add:hover img{
+  opacity: 1;
+}
+.Button-Add img{
+  transform: scale(0.5);
+  opacity: 0.8;
+}
+.SetA .Button-Add img{
+  opacity: 0.6;
+}
+.SetA .Button-Add:hover img{
+  opacity: 1;
+}
+.SetB .Button-Add img{
+  filter: invert(100%);
+}
+
+/* Configuracion de los contenedores de los modelos 3D */
+#Contenedor_Izquierdo {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+#Contenedor_Izquierdo canvas {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#Contenedor_Derecho {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+#Contenedor_Derecho canvas {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*Configuracion de los botones Cancelar*/
+.Close-Button {
+  height: 2.5rem;
+  width: 2.5rem;
+  margin: 0.5rem;
+  background-color: rgba(38, 38, 38, 0.2);
+  border-radius: 100%;
+  position: absolute;
+  right: 0;
+  z-index: 41;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.Close-Button:hover {
+  background-color: rgba(38, 38, 38, 0.5);
+}
+
+.Close-Button img {
+  width: 35%;
+  height: 35%;
+}
+
+.SetA .Close-Button {
+  filter: invert(100%);
+}
+/* Configuracion de los botones Eliminar de los valores agregados */
+.delete-div{
+  filter: invert(100%);
+  height: 1rem;
+  width: 1rem;
+  border-radius: 100%;
+  padding: 0.2rem
+}
+.delete-div:hover{
+  filter: invert(100%);
+  opacity: 1;
+  background-color: rgba(38, 38, 38, 0.2);
+}
+.delete-div img{
+  transform: scale(0.5);
+}
+.item{
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 0.5rem;
+  align-items: center;
+  margin: 0.5rem;
+  width: fit-content;
+  color:#F1F1F1;
+}
+
+/* Configuracion de la visualizacion de la CARDINALIDAD*/
+.Cardinalidad{
+  color: #F1F1F1;
+  margin: 1rem 2rem;
+  position: absolute;
+  bottom:0;
+  right: 0;
+  z-index: 41;
+  font-size: 2rem;
+  font-family: 'GentleMonster';
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transition: opacity 0.25s ease-in-out;
+}
+.card:hover .Cardinalidad{
+  opacity: 1;
+}
+.Cardinality-Title{
+  font-size: 0.5rem;
+}
+.SetB .Cardinalidad{
+  color: #262626;
+}

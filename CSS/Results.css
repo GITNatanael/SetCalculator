@@ -1,0 +1,259 @@
+#ContenedorOperaciones{
+    display: none;
+    grid-template-columns: auto 1fr;
+    flex-direction: row-reverse;
+    background: transparent;
+    height:fill;
+    width:100vw ;
+    gap: 4rem;
+    padding: 0rem 3rem;
+    opacity: 0;
+    transition: opacity 2.0s ease-in-out;
+    position: relative;
+    top: 0;
+    left: 0;
+   }
+
+.Resultados-Column-Right{           /* Columna DERECHA */
+    max-width: 290px;
+    height: fit-content;
+    position: fixed; /* Posición fija */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 30%;
+    height: 100%;
+    margin: 0rem 3rem;    
+}
+.Resultados-Filter{
+    background-color: transparent;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: 1rem;
+    align-self: end;
+    justify-content: flex-end;
+    margin-top: 12rem;
+}
+.Showing-now{
+    color: white;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    font-size: 1rem;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+
+}
+.Element{
+    border: 0.1rem solid white;
+    color: white;
+    padding: 0.5rem 1rem;
+    width: fit-content;
+    border-radius: 10rem;
+    font-size: 0.7rem;
+}
+.Element:hover{
+    background-color: white;
+    color: black;
+    opacity: 0.6;
+}
+.Resultados-Help-Text{
+    color: white;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    backdrop-filter: blur(10px);
+    background-color: #262626;
+    margin: 2rem 2rem;
+    padding: 1rem 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.Resultados-Column-Left{             /* Columna IZQUIERDA */
+    max-width: 80%;
+
+}
+.Resultados-Grid-Superior{
+    display: grid;
+    /* grid-template-columns:  1fr auto ; */
+    border-radius: 10px;
+    overflow: hidden;
+    min-width: fit-content;
+    font-size: 3rem;
+    padding: 0 2rem;
+    color: white;
+    height: 10rem;
+}
+.Resultados-Grid-Inferior{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+}
+.Resultados-Grid-Inferior-FILTRO{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+}
+.Tarjeta{
+    font-size: 0.8rem;
+    background: #222B3D;
+    color: #F1F1F1;
+    min-height: 15rem;
+    max-height: 25rem;
+    max-width: fit-content;
+    min-width: 15rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem ;
+    padding-left: 1.5rem;
+    overflow-y: hidden;
+    overflow-x:hidden; 
+    border-radius: 10px;
+}
+
+.hidden{
+    display: none;
+}
+
+.active{
+    background-color: white;
+    color: black;
+    opacity: 1;
+}
+
+.Tarjeta-Header{
+    display: grid;
+    grid-template-columns: auto 1.5rem;
+    gap: 1rem;
+}
+  .Texto-NombreOperacion{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1rem;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center;
+    gap: 1rem;
+    }
+    .Operator {
+        flex-grow: 1;
+        height: auto;
+        width: 1rem;
+    }
+    .Info-icon{
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    .Info-icon img{
+    flex-shrink: 0;
+    filter: invert(100%);
+    width: 1.2rem;
+    height: 1.2rem;
+    opacity: 0.2;
+    justify-self: end;
+    align-self: flex-start;
+    }
+    .Info-icon img:hover{
+        opacity: 0.85;
+    }
+.OutputCard.Result{  
+
+    display: inline-block;
+    overflow-y: auto;
+    overflow-x: auto;
+    padding: 1rem;
+    background-color: transparent;
+    color: #F1F1F1;
+    text-align: left;
+    font-size: 1.5rem;
+    width: 100%;
+}
+.Tarjeta-Footer{
+    height: 2rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.2rem;
+
+}
+.img-container{
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 100%;
+}
+.img-container:hover{
+    background-color: #F1F1F1;
+}
+.copy-button {
+    flex-shrink: 0;
+    filter: invert(100%);
+    width: auto;
+    height: 70%;
+}
+.img-container:hover .copy-button {
+    filter: none;
+
+  }
+  
+.copy-text {
+    display: none;
+  }
+  .copy-text.show {
+    display: inline-block;
+  } 
+  .copied-text {
+    display: none;
+  }
+  .copied-text.show {
+    display: inline-block;
+  }
+  
+
+
+/* Estilos para dispositivos celulares */
+@media (max-width: 768px) {
+    #ContenedorOperaciones{
+        padding: 0rem ;
+       }
+    .Resultados-Column-Right{           /* Columna DERECHA */
+        margin: 1rem 2rem;    
+    }
+    .Expand-icon{
+        font-size: 2.5rem;
+      }
+    .Resultados-Filter{
+        font-size: 0.7rem;
+    }
+    .Resultados-Column-Left{             /* Columna IZQUIERDA */
+        width: 55vw;
+
+    }
+    .Resultados-Grid-Inferior{
+        width: auto;
+    }
+    .Tarjeta{                       
+        height: 15rem;
+        max-width: fit-content;
+        min-width: 100%;
+    }
+    .Resultados-Help-Text{
+        font-size: 0.7rem;
+        width: 150px;
+    }
+     .Texto-NombreOperacion{
+        font-size: 0.7rem;
+     }
+
+  }

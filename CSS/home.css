@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/helvetica-neue-9');
+@font-face {
+    font-family: 'PrincipalFont';
+    src: url('../Fonts/AndersonGrotesk.otf') format('opentype');
+  }
+  @font-face {
+    font-family: 'GentleMonster'; /* Asigna un nombre a la fuente */
+    src: url('../Fonts/gentlemonster-condensed.ttf') format('truetype'); /* Ruta relativa a la carpeta de fuentes */
+    /* Puedes agregar otros atributos opcionales como font-weight y font-style si la fuente los incluye */
+  }
+html {
+    font-size: 16px;
+    font-family: 'PrincipalFont',sans-serif;
+  }
+
+::-webkit-scrollbar{
+    width:0.2em ;
+}
+
+::-webkit-scrollbar-track{
+    background:transparent ;
+}
+::-webkit-scrollbar-thumb{
+    background: black ;
+}
+
+body{
+     background: #F1F1F1;
+     margin: 0;
+}
+
+body.change-background {
+  /* background-color: #262626; */
+  background:  linear-gradient(to right, #0F1417, #26252A);
+}
+
+
+#Grid2{
+    background: transparent;
+    height:fill;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    position: absolute;    
+}
+#ContenedorSets{
+    display: flex;
+    justify-content: space-between;
+    width: 45rem;
+    background: transparent; 
+    position: relative;
+    background: #262626;
+    border-radius: 10px;
+}
+@media screen and (max-width: 600px) {
+    #ContenedorSets {
+      transform: scale(0.9);
+    }
+    .card{
+        transform: scale(0.9); 
+    }
+    #Contenedor_Izquierdo {
+        transform: scale(0.9); 
+      }
+      #Contenedor_Izquierdo canvas {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      #Contenedor_Derecho {
+        transform: scale(0.9); 
+      }
+      #Contenedor_Derecho canvas {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+  }
+
+.Instructions{
+    margin: 4rem 0;
+    display: grid;
+    grid-template-columns:  auto 1fr;
+    font-size: 3rem;
+    height: auto;
+    max-width: 400px;
+    min-width: 400px;
+    left: 0;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+  
+.top {
+    align-self: start;
+    height: 6rem;
+    width: auto;
+  }
+  
+  .bottom {
+    align-self: end;
+    width: auto;
+  }
+.ButtonDiv{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row-reverse;
+}
+#btn3{
+  background-color: #262626;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+  width: 7rem;
+  margin: 2rem 5rem;
+  padding: 0.5rem;
+  border-radius: 50px;
+}
+#btn3 p{
+  border: 0.1rem solid #F1F1F1;
+  background-color: #F1F1F1;
+  border-radius: 25px;
+  padding: 0.4rem 0.9rem;
+  color: #0F1417;
+  font-size: 0.7rem;
+
+  transition: padding 0.2s ease-in-out;
+}
+#btn3:hover p{
+  padding: 0.5rem 2rem ;
+}
+#btn3:hover .jelly{
+  display: none;
+}
+#btn3:active p {
+  background-color: #262626;
+  color: white;
+}
+
+
+.blur{
+    background: transparent;
+    position: fixed;
+    left: 0;
+    z-index: 1;
+    backdrop-filter: blur(10.5px);
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    transition: backdrop-filter 0.5s ease-out;
+    transition: opacity 0.5s ease-out;
+}
+.Expand-icon{
+  filter: invert(100%);
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.5);;
+  justify-content: center; /* Centra horizontalmente los elementos en el flex container */
+  align-items: center;
+  flex-direction: column;
+  z-index: -1;
+  transition: opacity 0.5s ease;
+  font-size: 1.5rem;
+}
+.Expand-icon img {
+  max-width: 20%; /* Ajusta el tamaño máximo */
+  max-height: 20%;
+  transform: scaleX(-1);
+  
+}
