@@ -13,7 +13,7 @@ const frasesAyuda = [
     "Explora las opciones disponibles en el menú.",
     "Recuerda guardar tus cambios antes de salir.",
     "Si necesitas ayuda adicional, visita nuestra sección de preguntas frecuentes.",
-    " WebApp developed for set operations: Union, Intersection, Difference, Exclusion. Enter values in the text boxes of each Set and press the button. The operations will be displayed."
+    //" WebApp developed for set operations: Union, Intersection, Difference, Exclusion. Enter values in the text boxes of each Set and press the button. The operations will be displayed."
   ];
   
   // Función para mostrar una frase aleatoria de ayuda

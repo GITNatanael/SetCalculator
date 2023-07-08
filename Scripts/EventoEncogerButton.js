@@ -29,7 +29,12 @@ function encoger() {
 			Instructions.css("opacity", "0");
 			DivText.css("opacity", "0");
 			BotonGO.css("opacity", "0");
+			$('.Header-Right').css({		
+				'transform': 'translateY(-10rem)'
+			  });
 			tarjeta1.one("transitionend", resolve);
+			
+			  
 		}),
 		new Promise((resolve) => {
 			tarjeta2.css({
@@ -82,6 +87,9 @@ function encoger() {
 		  });
 		  $('.target').css({		//Altera el color de la barrita deslizadora
 			'filter': 'invert(100%)'
+		  });
+		  $('.Header-Right').css({		//Altera el color de la barrita deslizadora
+			'display': 'none'
 		  });
 		  
 

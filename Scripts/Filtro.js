@@ -2,7 +2,7 @@
 const preferencesButtonA = document.querySelector('.SetA .Preferences-Button');
 const preferencesButtonIMGA = document.querySelectorAll('.SetA .Preferences-Button img');
 const preferencesMenuA = document.querySelector('.SetA .Preferences-Menu');
-const colitaA = document.querySelector('.SetA .colitaA-Dialogo');
+const colitaA = document.querySelector('.SetA .colita-Dialogo');
 const separatorButtonsA = document.querySelectorAll('.SetA .Separator-Button');
 let selectedSeparator = /[,\s\r\n]+|\{|\}/; // Separador predeterminado
 
@@ -142,7 +142,7 @@ function fun1() {
   const preferencesButtonB = document.querySelector('.SetB .Preferences-Button');
   const preferencesButtonIMGB = document.querySelectorAll('.SetB .Preferences-Button img');
   const preferencesMenuB = document.querySelector('.SetB .Preferences-Menu');
-  const colitaB = document.querySelector('.SetB .colitaB-Dialogo');
+  const colitaB = document.querySelector('.SetB .colita-Dialogo');
   const separatorButtonsB = document.querySelectorAll('.SetB .Separator-Button');
   preferencesButtonB.addEventListener('mousedown', (event) => {
     event.preventDefault();

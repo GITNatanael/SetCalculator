@@ -1,12 +1,14 @@
-.Header{
+header{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.Header-Left{
     display: flex;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin: 1.5rem;
     align-items: center;
-    background-color: transparent;
-    padding: 10px;
-    
-    
+    background-color: transparent;   
+    flex-wrap: wrap;    
   }
   .Logo{
     height: auto;
@@ -30,16 +32,8 @@
     padding: 0;
     font-size: 0.8rem;
     font-weight: bold;
-
     margin-left: 2rem;
-  }
-  
-  .menu-list li {
-    margin-left: 15px;
-  }
-  
-  .menu-list li:first-child {
-    margin-left: 0;
+    transition: filter 1s ease-in-out;
   }
 
 .mynav ul {
@@ -71,4 +65,54 @@
   .mynav a,
   .target {
     transition: all .35s ease-in-out;
+  }
+
+  .Header-Right{
+    display: grid;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    transition: transform 1s ease-in-out;
+
+  }
+  .UXLogo-Ribbon{
+    width: fit-content;
+    background-color: white;
+    height: 4rem;
+    justify-self: end;
+    margin: 0rem 4rem;
+    display: flex;
+    padding: 0.5rem;
+    right: 15%;
+    top: -2rem;
+  }
+  .UX-Logo{
+    height: 1.5rem;
+    width: 2rem;
+    align-self: flex-end;
+  }
+
+  @media screen and (max-width: 600px) {
+    .Logo{
+      height: auto;
+      width: 8rem;
+      margin: 0rem 0rem;
+      transition: opacity 1s ease-in-out;
+    }
+    .mynav {
+      max-width: 20rem; 
+
+    }
+    .menu-list {
+      font-size: 0.8rem;
+      margin-left: 1rem;
+    }
+    .menu-list li {
+      margin-top: 0rem;
+      margin-right: 1rem;
+    }
+    .UXLogo-Ribbon{
+      margin: 0rem 2rem;
+    }
   }
