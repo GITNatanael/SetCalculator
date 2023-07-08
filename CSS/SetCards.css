@@ -195,21 +195,32 @@
 
 
 
-/* Configuraciones de las entradas de datos de los conjuntos: textboxs, botones,etc
- */
+/* TEXTBOX */
 .Div-Textbox{
+  background-color: transparent;
   width: 100%;
   height: 2.5rem;
   display: flex;
   align-items: center;
   border-radius: 50px;
   padding: 0rem 0.2rem;
-  gap: 0.5rem;
-
+  gap: 0rem;
+  transition: background-color 0.25s ease-in-out;;
+}
+.SetA .Div-Textbox{
+  border: 0.1rem solid #F1F1F1;
+}
+.SetB .Div-Textbox{
+  border: 0.1rem solid #0B0B0B;
 }
 .SetA .Textbox{
-  background-color: #F1F1F1;
+  color: white;
+}
+.SetB .Textbox{
   color: black;
+}
+.Div-Textbox:focus-within .Textbox{
+  filter: invert(100%);
 }
 .Textbox{
   height: 100%;
@@ -217,52 +228,41 @@
   border: none;
   border-radius: 50px;
   padding: 0rem 1rem;
-  background-color: #262626;
+  background-color: transparent;
   color: white;
 }
 .Textbox:focus {
   outline: none;
 }
-.SetA .Div-Textbox::before{
-  background-color: #F1F1F1;
+.SetA .Div-Textbox:focus-within {
+  background-color:#F1F1F1;
 }
-.Div-Textbox::before{
-  content: "";
-  display: flex;
-  background-color: #262626;
-  height: 1rem;
-  width: 70%;
-  margin: 1rem;
-  position: absolute;
-  z-index: -1;
+.SetB .Div-Textbox:focus-within {
+  background-color:#0B0B0B;
 }
-.SetA .Button-Add{
-  background-color: #F1F1F1;;
-}
+
+/* ADD BTN */
+
 .Button-Add{
-  background-color: #262626;
   height: 2.5rem;
-  width: 3.5rem;
+  width: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 100%;
- 
+  border-radius: 50px;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  opacity: 0.5;
+  font-family: 'GentleMonster';
+  cursor: pointer;
 }
-.Button-Add:hover img{
+.Button-Add:hover{
   opacity: 1;
 }
-.Button-Add img{
-  transform: scale(0.5);
-  opacity: 0.8;
+.SetA .Button-Add{
+  color: #F1F1F1;
 }
-.SetA .Button-Add img{
-  opacity: 0.6;
-}
-.SetA .Button-Add:hover img{
-  opacity: 1;
-}
-.SetB .Button-Add img{
+.Div-Textbox:focus-within .Button-Add{
   filter: invert(100%);
 }
 
@@ -293,7 +293,7 @@
   transform: translate(-50%, -50%);
 }
 
-/*Configuracion de los botones Cancelar*/
+/*CLOSE*/
 .Close-Button {
   height: 2.5rem;
   width: 2.5rem;
@@ -306,6 +306,7 @@
   display: none;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .Close-Button:hover {
@@ -326,7 +327,8 @@
   height: 1rem;
   width: 1rem;
   border-radius: 100%;
-  padding: 0.2rem
+  padding: 0.2rem;
+  
 }
 .delete-div:hover{
   filter: invert(100%);
@@ -346,7 +348,7 @@
   color:#F1F1F1;
 }
 
-/* Configuracion de la visualizacion de la CARDINALIDAD*/
+/* CARDINALIDAD*/
 .Cardinalidad{
   color: #F1F1F1;
   margin: 1rem 2rem;
@@ -369,4 +371,90 @@
 }
 .SetB .Cardinalidad{
   color: #262626;
+}
+/* PREFERENCE BTN */
+.Preferences-Button{
+  font-size: 0.6rem;
+  display: grid;
+  align-items:  center;
+  justify-items: center;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.Preferences-Button img{
+  opacity: 0.5;
+  width: 1rem;
+}
+.Preferences-Button img.clicked{
+  opacity: 1;
+}
+.Preferences-Button:hover img{
+  opacity: 1;
+}
+.SetA .Preferences-Button{
+  filter: invert(100%);
+}
+.SetA .Div-Textbox:focus-within .Preferences-Button{
+  filter: none;
+}
+.SetB .Div-Textbox:focus-within .Preferences-Button{
+  filter: invert(100%);
+}
+
+/* PREFERENCE MENU */
+.Preferences-Menu {
+  display: none; /* Oculta el menú por defecto */
+  grid-template-columns: 1fr;
+  position: absolute;
+  background-color: #262626;
+  border-radius: 10px;
+  z-index: 9999;
+  transform: translateY(-7rem);
+  width: 5rem;
+  height: fit-content;
+  overflow: auto;
+  padding: 1rem;
+  justify-items: center;
+  align-items: center;
+  color: white;
+  font-size: 0.8rem;
+}
+.Menu-Titles{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr; 
+}
+
+.Buttons-Container{
+  width: 100%;
+  padding: 0.5rem 0rem;
+}
+.Separator-Button {
+  width: 100%;
+  padding: 0.5rem 0rem;
+  opacity: 0.5;
+  display: flex;
+  align-content: center;
+  cursor: pointer;
+}
+.Separator-Button:hover{
+  opacity: 1;
+}
+.Separator-Button.clicked{
+  opacity: 1;
+}
+.Separator-Button img{
+  margin-right: 1rem;
+  filter: invert(100%);
+  height: 1rem;
+  width: 1rem;
+}
+.Colita-Dialogo{
+  display: none;
+  bottom: 3.3rem;
+  position: absolute;
+   border-top: 20px solid transparent;
+   border-top-color: #262626;
+   border-left: 20px solid transparent;
+   border-right: 20px solid transparent;
 }

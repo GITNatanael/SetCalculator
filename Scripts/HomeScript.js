@@ -22,65 +22,7 @@ AddButtonA.addEventListener('click', fun1);//Linea para que al oprimirse el bot�
 AddButtonB.addEventListener('click', fun2);//Linea para que al oprimirse el botón se ejcute la funcion de C2
 
 //Funciones
-function fun1() {
-  // Crear un elemento <img> con la imagen del botón de cancelar
-  const cancelButton = document.createElement('img');
-  cancelButton.src = './Assets/Cancel-Button.svg';
 
-  // Crear un elemento <span> para contener el valor
-  const valueSpan = document.createElement('span');
-  valueSpan.innerText = TextBoxA.value;
-
-  // Agregar el botón de cancelar, el espacio y el valor al elemento 'OutputA'
-  OutputA.appendChild(cancelButton);
-  OutputA.appendChild(valueSpan);
-
-  // Agregar el evento click al botón de cancelar para eliminar el valor correspondiente
-  cancelButton.addEventListener('click', function() {
-    // Eliminar el valor del conjunto SetA
-    SetA.delete(valueSpan.innerText);
-    // Eliminar el elemento del DOM
-    OutputA.removeChild(cancelButton);
-
-    OutputA.removeChild(valueSpan);
-  });
-
-  // Agregar el valor al conjunto SetA
-  SetA.add(TextBoxA.value);
-
-  // Limpiar el valor del TextBoxA
-  TextBoxA.value = '';
-}
-
-
-function fun2() {
-  // Crear un elemento <img> con la imagen del botón de cancelar
-  const cancelButton = document.createElement('img');
-  cancelButton.src = './Assets/Cancel-Button.svg';
-
-  // Crear un elemento <span> para contener el valor
-  const valueSpan = document.createElement('span');
-  valueSpan.innerText = TextBoxB.value;
-
-  // Agregar el botón de cancelar, el espacio y el valor al elemento 'OutputA'
-  OutputB.appendChild(cancelButton);
-  OutputB.appendChild(valueSpan);
-
-  // Agregar el evento click al botón de cancelar para eliminar el valor correspondiente
-  cancelButton.addEventListener('click', function() {
-    // Eliminar el valor del conjunto SetB
-    SetB.delete(valueSpan.innerText);
-    // Eliminar el elemento del DOM
-    OutputB.removeChild(cancelButton);
-    OutputB.removeChild(valueSpan);
-  });
-
-  // Agregar el valor al conjunto SetB
-  SetB.add(TextBoxB.value);
-
-  // Limpiar el valor del TextBoxB
-  TextBoxB.value = '';
-}
 
 //Version vieja de fun1 y fun2:
 function fun2Deprected() { //Función para que cuando se oprima el botón de C2 se imprima en el Card C2 y a su vez agregue el mismo elemento al conjunto creado para él.

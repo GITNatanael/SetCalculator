@@ -122,6 +122,7 @@ body.change-background {
   margin: 2rem 5rem;
   padding: 0.5rem;
   border-radius: 50px;
+  cursor: pointer;
 }
 #btn3 p{
   border: 0.1rem solid #F1F1F1;

@@ -55,10 +55,20 @@
             <div class="content">
                 <div class="OutputCard"><p class="output" id="OutputA"></p></div>
                 <div class="Div-Textbox">
+                    <div class="Preferences-Button"><img src="./Assets/Preferences-Icon.svg" alt="Preferences Btn"></div>
+                        <div class="Preferences-Menu">
+                            <div class="Menu-Titles">allow now</div>
+                            <div class="Buttons-Container">
+                                <div class="Separator-Button" id="comas" data-separator="comma"><img src="./Assets/Comma-Icon.png" alt="Comma Icon">Comma</div>
+                                <div class="Separator-Button" id="espacios" data-separator="space"><img src="./Assets/Space-Icon.svg" alt="Space Icon">Space</div>
+                                <div class="Separator-Button" data-separator="braces" ><img src="./Assets/Braces-Icon.svg" alt="Braces Icon">Braces</div>
+                                <!-- Agrega más botones para otras opciones de separación -->
+                            </div>
+                        </div>
+                        <div class="Colita-Dialogo"></div>
                     <input class="Textbox" placeholder="Type something, e.x: &quot churros &quot..." 
                     type="text" id="TextboxA"  name="Textbox"  onkeyup.enter="fun1()">
-                    <divc class="Conection-Textbox-Button"></divc>
-                    <div class="Button-Add" id="Button-Add-A"> <img src="./Assets/Send-Button.svg" alt="Send-Button"></div>
+                    <div class="Button-Add" id="Button-Add-A"> Add</div>
                 </div>  
             </div>
             <p class="SetName">Set A</p>
@@ -72,9 +82,19 @@
             <div class="content">
                 <div class="OutputCard"><p class="output" id="OutputB"></p></div>
                 <div class="Div-Textbox">
+                    <div class="Preferences-Button"><img src="./Assets/Preferences-Icon.svg" alt="Preferences Btn"></div>
+                    <div class="Preferences-Menu">
+                        <div class="Menu-Titles">allow now</div>
+                        <div class="Buttons-Container">
+                            <div class="Separator-Button"  data-separator="comma"><img src="./Assets/Comma-Icon.png" alt="Comma Icon">Comma</div>
+                            <div class="Separator-Button" data-separator="space"><img src="./Assets/Space-Icon.svg" alt="Space Icon">Space</div>
+                            <div class="Separator-Button" data-separator="braces" ><img src="./Assets/Braces-Icon.svg" alt="Braces Icon">Braces</div>
+                            <!-- Agrega más botones para otras opciones de separación -->
+                        </div>
+                    </div>
                     <input class="Textbox" placeholder="Type something..." type="text" id="TextboxB" name="Textbox2" required minlength="4" maxlength="50" size="10">
                     <divc class="Conection-Textbox-Button"></divc>
-                    <div class="Button-Add" id="Button-Add-B"> <img src="./Assets/Send-Button.svg" alt="Send-Button"></div>
+                    <div class="Button-Add" id="Button-Add-B"> Add</div>
                 </div>
             </div>
             <p class="SetName">Set B</p>
