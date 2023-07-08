@@ -71,9 +71,12 @@ function encoger() {
 		tarjeta1.addClass("disable-hover");
 		tarjeta2.addClass("disable-hover");
 		
-		$('.Logo').css({		//Altera el color del logo
-			'filter': 'none'
+		$('.Logo.Black').css({		//Altera el color del logo
+			'opacity': '0'
 		  });
+		$('.Logo.White').css({		//Altera el color del logo
+			'opacity': '1'
+		});
 		$('.menu-list').css({		//Altera el color de los enlaces del menu
 			'filter': 'invert(100%)'
 		  });

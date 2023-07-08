@@ -1,17 +1,27 @@
 .Header{
     display: flex;
-  
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     align-items: center;
     background-color: transparent;
     padding: 10px;
     
+    
   }
   .Logo{
     height: auto;
-    width: 10rem;
-    filter: invert(100%);
-    transition: filter 0.5s ease-in-out;
+    width: 8rem;
     margin: 0rem 1rem;
+    transition: opacity 1s ease-in-out;
+  }
+  .Logo.Black{
+    opacity: 1;
+    
+  }
+  .Logo.White{
+    position:absolute;
+    opacity: 0;
+    z-index: -1;
   }
   .menu-list {
     display: flex;
