@@ -56,32 +56,6 @@ body.change-background {
     background: #262626;
     border-radius: 10px;
 }
-@media screen and (max-width: 600px) {
-    #ContenedorSets {
-      transform: scale(0.9);
-    }
-    .card{
-        transform: scale(0.9); 
-    }
-    #Contenedor_Izquierdo {
-        transform: scale(0.9); 
-      }
-      #Contenedor_Izquierdo canvas {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-      }
-      #Contenedor_Derecho {
-        transform: scale(0.9); 
-      }
-      #Contenedor_Derecho canvas {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-      }
-  }
 
 .Instructions{
     margin: 4rem 0;
@@ -175,10 +149,44 @@ body.change-background {
   z-index: -1;
   transition: opacity 0.5s ease;
   font-size: 1.5rem;
+  cursor: pointer;
 }
 .Expand-icon img {
   max-width: 20%; /* Ajusta el tamaño máximo */
   max-height: 20%;
   transform: scaleX(-1);
   
+}
+@media screen and (max-width: 600px) {
+  #ContenedorSets {
+    transform: scale(0.9);
+  }
+  .card{
+      transform: scale(0.9); 
+  }
+  #Contenedor_Izquierdo {
+      transform: scale(0.9); 
+    }
+    #Contenedor_Izquierdo canvas {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    #Contenedor_Derecho {
+      transform: scale(0.9); 
+    }
+    #Contenedor_Derecho canvas {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .ButtonDiv{
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: row;
+  }
+    
 }

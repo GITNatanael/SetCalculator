@@ -11,12 +11,14 @@
 }
 
 .Tarjeta video{
-  width: 2.5rem;
+  width: 2rem;
   height: 2rem;
   flex-shrink: 0;
+
+  background-color: #222B3D;
 }
 
 #Producto-AXB{
-  width: 3.5rem;
-  height: 3rem;
+  width: 3rem;
+  height: 2rem;
 }

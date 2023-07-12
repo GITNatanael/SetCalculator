@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('.copy-button').hover(
+    $('.img-container').hover(
         function () {
             var card = $(this).closest('.Tarjeta');
             var copyText = card.find('.copy-text');
@@ -12,7 +12,7 @@ $(document).ready(function () {
         }
     );
 
-    $('.copy-button').click(function () {
+    $('.img-container').click(function () {
         var card = $(this).closest('.Tarjeta');
         var contentToCopy = card.find('.output-operations').text().trim();
 
@@ -28,8 +28,8 @@ $(document).ready(function () {
         // Elimina el textarea temporal
         tempTextarea.remove();
 
-        // Desactivar el evento hover en .copy-button
-        $('.copy-button').off('mouseenter mouseleave');
+        // Desactivar el evento hover en .img-container
+        $('.img-container').off('mouseenter mouseleave');
 
         // Actualiza el texto al copiado y muestra por 5 segundos
         var copiedText = card.find('.copied-text');
@@ -38,8 +38,8 @@ $(document).ready(function () {
         copyText.removeClass('show');
         setTimeout(function () {
             copiedText.removeClass('show');
-            // Reactivar el evento hover en .copy-button
-            $('.copy-button').hover(
+            // Reactivar el evento hover en .img-container
+            $('.img-container').hover(
                 function () {
                     var card = $(this).closest('.Tarjeta');
                     var copyText = card.find('.copy-text');
@@ -51,7 +51,7 @@ $(document).ready(function () {
                     copyText.removeClass('show');
                 }
             );
-        }, 5000);
+        }, 1000);
 
     });
 });

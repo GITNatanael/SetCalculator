@@ -41,7 +41,7 @@
             <div class="top"> SET CALCULATOR </div>
             <div class="bottom">NATE.HTML - <span class="copyright">&#169;</span>2023</div>
        </div>
-    
+       <div class="Background-Blur"></div>
         <div id="ContenedorSets">
             <div class="Expand-icon"><img src="./Assets/Expand Icon.svg" alt="Expand icon"><br>Edit</div>
 
@@ -120,6 +120,8 @@
         <div class="Resultados-Help-Text" id="Home-Dialogues">
         </div> 
 
+       
+
          <!-- Div del contenedor que contiene los Cards -->
          
 <!-- Operaciones -->
@@ -128,12 +130,12 @@
     <div class="Resultados-Column-Right">   <!-- Columna DERECHA -->
         <div class="Resultados-Filter">
             <div class="Showing-now"> showing now</div>
-            <div class="Element" data-target="Union">Union</div>
-            <div class="Element" data-target="Interseccion">Intersección</div>
-            <div class="Element" data-target="Diferencia">Diferencia</div>
-            <div class="Element" data-target="Disjoint">Disjoint</div>
-            <div class="Element" data-target="Diferencia-Simetrica">Diferencia Simetrica</div>
-            <div class="Element" data-target="Producto-Cartesiano">Producto Cartesiano</div>
+            <div class="Element" data-target="Union"><span class="unicode-character">&#x222A;</span> Union</div>
+            <div class="Element" data-target="Interseccion"><span class="unicode-character">&#x2229;</span>  Intersección</div>
+            <div class="Element" data-target="Diferencia"><span class="unicode-character">&#x2212;</span>  Diferencia</div>
+            <div class="Element" data-target="Disjoint"><span class="unicode-character">&#x222A;&#x003D;&#x2205;</span>Disjoint</div>
+            <div class="Element" data-target="Diferencia-Simetrica"><span class="unicode-character">&#x25B3;</span>  Diferencia Simetrica</div>
+            <div class="Element" data-target="Producto-Cartesiano"><span class="unicode-character">&#x00D7;</span>  Producto Cartesiano</div>
         </div>
         
         <div class="Resultados-Help-Text" id="dialogo">
@@ -145,11 +147,12 @@
 <!-- Div Union -->   
             <div class="Tarjeta  " id="Union" >
                 <div class="Tarjeta-Header">
+                    <div class="Symbol-Operator">&#x222A;</div>
                     <div class="Texto-NombreOperacion">
+                        <div class="Name-Operator">Union</div>  
                         <video autoplay loop muted>
                             <source src="./Assets/Union.mp4" type="video/mp4">
                         </video>
-                        <div class="Operator">Union</div>  
                     </div>
                     <div class="Info-icon">
                         <img src="./Assets/Info_icon.svg" alt="Info icon">
@@ -165,11 +168,12 @@
 <!-- Div Intersección -->
             <div class="Tarjeta " id="Interseccion" >
                 <div class="Tarjeta-Header">
+                    <div class="Symbol-Operator">&#x2229;</div>
                     <div class="Texto-NombreOperacion">
+                        <div class="Name-Operator">Intersection</div>  
                         <video autoplay loop muted>
                             <source src="./Assets/Interseccion.mp4" type="video/mp4">
-                        </video>
-                        <div class="Operator">Intersection</div>                   
+                        </video>                 
                     </div>
                     <div class="Info-icon">
                         <img src="./Assets/Info_icon.svg" alt="Info icon">
@@ -185,11 +189,12 @@
 <!-- Div Diferencia Simetrica -->
             <div class="Tarjeta " id="Diferencia-Simetrica" >
                 <div class="Tarjeta-Header">
+                    <div class="Symbol-Operator">&#x25B3;</div>
                     <div class="Texto-NombreOperacion">
+                        <div class="Name-Operator">Symmetric Difference</div> 
                         <video autoplay loop muted>
                             <source src="./Assets/Diferencia Simetrica.mp4" type="video/mp4">
-                        </video>
-                        <div class="Operator">Symmetric Difference</div>                   
+                        </video>                  
                     </div>
                     <div class="Info-icon">
                         <img src="./Assets/Info_icon.svg" alt="Info icon">
@@ -204,24 +209,27 @@
             </div>
 <!-- Div Diferencia -->
             <div class="Tarjeta " id="Diferencia" >
-                
                 <div class="Tarjeta-Header">
+                    <div class="Symbol-Operator">&#x2212;</div>
                     <div class="Texto-NombreOperacion">
+                        <div class="Name-Operator">Diference A <span class="unicode-character">&#x2212;</span>B</div>
                         <video autoplay loop muted>
                             <source src="./Assets/Diferencia A-B.mp4" type="video/mp4">
-                        </video>
-                        <div class="Operator">Difference A-B</div>                     
+                        </video>                   
                     </div>
                     <div class="Info-icon">
                         <img src="./Assets/Info_icon.svg" alt="Info icon">
                     </div>
                 </div>
                 <div class="OutputCard Result"><p class="output-operations" id="OutputSetDifferenceA"></p></div>
-                <div class="Texto-NombreOperacion">
-                    <video autoplay loop muted>
-                        <source src="./Assets/Diferencia B-A.mp4" type="video/mp4">
-                    </video>
-                    <div class="Operator">Difference B-A</div> 
+                <div class="Tarjeta-Header">
+                <div class="Symbol-Operator">&#x2212;</div>
+                    <div class="Texto-NombreOperacion">
+                        <div class="Name-Operator">Diference B <span class="unicode-character">&#x2212;</span>A</div>
+                        <video autoplay loop muted>
+                            <source src="./Assets/Diferencia B-A.mp4" type="video/mp4">
+                        </video>                   
+                    </div>
                 </div>
                 <div class="OutputCard Result"><p class="output-operations" id="OutputSetDifferenceB"></p></div>
                 <div class="Tarjeta-Footer">  
@@ -233,11 +241,12 @@
 <!-- Div Disjoint -->
             <div class="Tarjeta " id="Disjoint" >
                 <div class="Tarjeta-Header">
+                    <div class="Symbol-Operator Second-Style">&#x222A;&#x003D;&#x2205;</div>
                     <div class="Texto-NombreOperacion">
+                        <div class="Name-Operator">Disjoint</div>
                         <video autoplay loop muted id="Producto-AXB">
                             <source src="./Assets/Disjoint.mp4" type="video/mp4">
-                        </video>
-                        <div class="Operator">Disjoint</div>                    
+                        </video>                    
                     </div>
                     <div class="Info-icon">
                         <img src="./Assets/Info_icon.svg" alt="Info icon">
@@ -253,11 +262,12 @@
 <!-- Div Producto Cartesiano -->
             <div class="Tarjeta " id="Producto-Cartesiano" >
                 <div class="Tarjeta-Header">
+                    <div class="Symbol-Operator">&#x00D7;</div>
                     <div class="Texto-NombreOperacion">
+                        <div class="Name-Operator"> Cartesian Product</div> 
                         <video autoplay loop muted id="Producto-AXB">
                             <source src="./Assets/Producto AXB.mp4" type="video/mp4">
-                        </video>
-                        <div class="Operator">Cartesian Product</div>                     
+                        </video>                    
                     </div>
                     <div class="Info-icon">
                         <img src="./Assets/Info_icon.svg" alt="Info icon">
@@ -277,31 +287,33 @@
     <!-- Div Union HIDDEN-->   
                 <div class="Tarjeta hidden" id="Union" >
                     <div class="Tarjeta-Header">
+                        <div class="Symbol-Operator">&#x222A;</div>
                         <div class="Texto-NombreOperacion">
+                            <div class="Name-Operator">Union</div>  
                             <video autoplay loop muted>
                                 <source src="./Assets/Union.mp4" type="video/mp4">
                             </video>
-                            <div class="Operator">Union</div>  
                         </div>
                         <div class="Info-icon">
                             <img src="./Assets/Info_icon.svg" alt="Info icon">
                         </div>   
                     </div>
                     <div class="OutputCard Result"><p class="output-operations" id="OutputUnion"></p></div>
-                    <div class="Tarjeta-Footer">  
-                        <div class="img-container"><img src="./Assets/Copy-Icon.svg" alt="Copy" class="copy-button"></div> 
+                    <div class="Tarjeta-Footer">
+                        <div class="img-container"><img src="./Assets/Copy-Icon.svg" alt="Copy" class="copy-button"></div>
                         <span class="copied-text">Copied</span>
                         <span class="copy-text">Copy</span>
-                    </div> 
+                    </div>
             </div>
     <!-- Div Intersección HIDDEN-->
             <div class="Tarjeta hidden" id="Interseccion" >
                 <div class="Tarjeta-Header">
+                    <div class="Symbol-Operator">&#x2229;</div>
                     <div class="Texto-NombreOperacion">
+                        <div class="Name-Operator">Intersection</div>  
                         <video autoplay loop muted>
                             <source src="./Assets/Interseccion.mp4" type="video/mp4">
-                        </video>
-                        <div class="Operator">Intersection</div>                   
+                        </video>                 
                     </div>
                     <div class="Info-icon">
                         <img src="./Assets/Info_icon.svg" alt="Info icon">
@@ -312,16 +324,17 @@
                     <div class="img-container"><img src="./Assets/Copy-Icon.svg" alt="Copy" class="copy-button"></div> 
                     <span class="copied-text">Copied</span>
                     <span class="copy-text">Copy</span>
-                </div>  
+                </div> 
             </div>
     <!-- Div Diferencia Simetrica HIDDEN-->
             <div class="Tarjeta hidden" id="Diferencia-Simetrica" >
                 <div class="Tarjeta-Header">
+                    <div class="Symbol-Operator">&#x25B3;</div>
                     <div class="Texto-NombreOperacion">
+                        <div class="Name-Operator">Symmetric Difference</div> 
                         <video autoplay loop muted>
                             <source src="./Assets/Diferencia Simetrica.mp4" type="video/mp4">
-                        </video>
-                        <div class="Operator">Symmetric Difference</div>                   
+                        </video>                  
                     </div>
                     <div class="Info-icon">
                         <img src="./Assets/Info_icon.svg" alt="Info icon">
@@ -329,47 +342,51 @@
                 </div>
                 <div class="OutputCard Result"><p class="output-operations" id="OutputSymmetricDifference"></p></div>
                 <div class="Tarjeta-Footer">  
-                    <div class="img-container"><img src="./Assets/Copy-Icon.svg" alt="Copy" class="copy-button"></div> 
+                    <div class="img-container"><img src="./Assets/Copy-Icon.svg" alt="Copy" class="copy-button"></div>
                     <span class="copied-text">Copied</span>
                     <span class="copy-text">Copy</span>
                 </div> 
             </div>
     <!-- Div Diferencia HIDDEN-->
             <div class="Tarjeta hidden" id="Diferencia" >
-                
                 <div class="Tarjeta-Header">
+                    <div class="Symbol-Operator">&#x2212;</div>
                     <div class="Texto-NombreOperacion">
+                        <div class="Name-Operator">Diference A <span class="unicode-character">&#x2212;</span>B</div>
                         <video autoplay loop muted>
                             <source src="./Assets/Diferencia A-B.mp4" type="video/mp4">
-                        </video>
-                        <div class="Operator">Difference A-B</div>                     
+                        </video>                   
                     </div>
                     <div class="Info-icon">
                         <img src="./Assets/Info_icon.svg" alt="Info icon">
                     </div>
                 </div>
                 <div class="OutputCard Result"><p class="output-operations" id="OutputSetDifferenceA"></p></div>
-                <div class="Texto-NombreOperacion">
-                    <video autoplay loop muted>
-                        <source src="./Assets/Diferencia B-A.mp4" type="video/mp4">
-                    </video>
-                    <div class="Operator">Difference B-A</div> 
+                <div class="Tarjeta-Header">
+                <div class="Symbol-Operator">&#x2212;</div>
+                    <div class="Texto-NombreOperacion">
+                        <div class="Name-Operator">Diference B <span class="unicode-character">&#x2212;</span>A</div>
+                        <video autoplay loop muted>
+                            <source src="./Assets/Diferencia B-A.mp4" type="video/mp4">
+                        </video>                   
+                    </div>
                 </div>
                 <div class="OutputCard Result"><p class="output-operations" id="OutputSetDifferenceB"></p></div>
                 <div class="Tarjeta-Footer">  
-                    <div class="img-container"><img src="./Assets/Copy-Icon.svg" alt="Copy" class="copy-button"></div> 
+                    <div class="img-container"><img src="./Assets/Copy-Icon.svg" alt="Copy" class="copy-button"></div>
                     <span class="copied-text">Copied</span>
                     <span class="copy-text">Copy</span>
-                </div> 
+                </div>
             </div>
     <!-- Div Disjoint HIDDEN-->
             <div class="Tarjeta hidden" id="Disjoint" >
                 <div class="Tarjeta-Header">
+                    <div class="Symbol-Operator Second-Style">&#x222A;&#x003D;&#x2205;</div>
                     <div class="Texto-NombreOperacion">
+                        <div class="Name-Operator">Disjoint</div>
                         <video autoplay loop muted id="Producto-AXB">
                             <source src="./Assets/Disjoint.mp4" type="video/mp4">
-                        </video>
-                        <div class="Operator">Disjoint</div>                    
+                        </video>                    
                     </div>
                     <div class="Info-icon">
                         <img src="./Assets/Info_icon.svg" alt="Info icon">
@@ -377,27 +394,28 @@
                 </div>
                 <div class="OutputCard Result"><p class="output-operations" id="OutputDisjointness"></p></div>
                 <div class="Tarjeta-Footer">  
-                    <div class="img-container"><img src="./Assets/Copy-Icon.svg" alt="Copy" class="copy-button"></div> 
+                    <div class="img-container"><img src="./Assets/Copy-Icon.svg" alt="Copy" class="copy-button"></div>
                     <span class="copied-text">Copied</span>
                     <span class="copy-text">Copy</span>
-                </div> 
+                </div>
             </div>
     <!-- Div Producto Cartesiano HIDDEN-->
             <div class="Tarjeta hidden" id="Producto-Cartesiano" >
                 <div class="Tarjeta-Header">
+                    <div class="Symbol-Operator">&#x00D7;</div>
                     <div class="Texto-NombreOperacion">
+                        <div class="Name-Operator"> Cartesian Product</div> 
                         <video autoplay loop muted id="Producto-AXB">
                             <source src="./Assets/Producto AXB.mp4" type="video/mp4">
-                        </video>
-                        <div class="Operator">Cartesian Product</div>                     
+                        </video>                    
                     </div>
                     <div class="Info-icon">
                         <img src="./Assets/Info_icon.svg" alt="Info icon">
                     </div>
                 </div>
                 <div class="OutputCard Result"><p class="output-operations" id="OutputCartesianProduct"></p></div>
-                <div class="Tarjeta-Footer">  
-                    <div class="img-container"><img src="./Assets/Copy-Icon.svg" alt="Copy" class="copy-button"></div> 
+                <div class="Tarjeta-Footer"> 
+                    <div class="img-container"><img src="./Assets/Copy-Icon.svg" alt="Copy" class="copy-button"></div>
                     <span class="copied-text">Copied</span>
                     <span class="copy-text">Copy</span>
                 </div>  

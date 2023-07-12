@@ -266,7 +266,7 @@
   filter: invert(100%);
 }
 
-/* Configuracion de los contenedores de los modelos 3D */
+/* 3D */
 #Contenedor_Izquierdo {
   position: absolute;
   height: 100%;
@@ -458,3 +458,4 @@
    border-left: 20px solid transparent;
    border-right: 20px solid transparent;
 }
+

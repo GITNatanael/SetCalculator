@@ -30,7 +30,7 @@ function encoger() {
 			DivText.css("opacity", "0");
 			BotonGO.css("opacity", "0");
 			$('.Header-Right').css({		
-				'transform': 'translateY(-10rem)'
+				'display': 'none'
 			  });
 			tarjeta1.one("transitionend", resolve);
 			
@@ -115,6 +115,11 @@ function encoger() {
 			blurcard.css("opacity", "1");
 			videoElement.style.opacity = '0';
 			$('.Expand-icon').css('display', 'none');
+			$('.Background-Blur').css('display', 'inline');
+			$('.mynav').css({ 
+				'position': 'relative' ,
+				'z-index': '-1' ,
+		});
 		});
 
 		$(document).click(function (event) {
@@ -134,6 +139,11 @@ function encoger() {
 				blurcard.css("opacity", "0");
 				videoElement.style.opacity = '1';
 				$('.Expand-icon').css('display', 'flex');
+				$('.Background-Blur').css('display', 'none');
+				$('.mynav').css({ 
+					'position': 'static' ,
+					'z-index': '0' ,
+			});
 			}
 		});
 	});
