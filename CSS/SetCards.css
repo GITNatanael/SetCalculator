@@ -363,7 +363,7 @@
   opacity: 0;
   transition: opacity 0.25s ease-in-out;
 }
-.card:hover .Cardinalidad{
+.card:not(.disable-hover):hover .Cardinalidad{
   opacity: 1;
 }
 .Cardinality-Title{

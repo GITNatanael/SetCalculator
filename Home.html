@@ -17,7 +17,7 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
-<body >
+<body>
     <header>
         <div class="Header-Left" >
             <img src="./Assets/Logo-Black.png" alt="Logo" class="Logo Black">
@@ -32,18 +32,18 @@
               </nav>
               <span class="target"></span>
         </div>
-        <div class="Header-Right"><div class="UXLogo-Ribbon"><img src="./Assets/NATEUXLOGO.png" alt="NATE.UX" class="UX-Logo"></div></div>
+        <div class="Header-Right"><div class="UXLogo-Ribbon" id="twotwo"><img src="./Assets/NATEUXLOGO.png" alt="NATE.UX" class="UX-Logo"></div></div>
     </header>
 
 
     <div class="container " id="Grid2">
         <div class="Instructions" id="Instructions">
-            <div class="top"> SET CALCULATOR </div>
+            <div class="top"> ONLINE SET CALCULATOR </div>
             <div class="bottom">NATE.HTML - <span class="copyright">&#169;</span>2023</div>
        </div>
-       <div class="Background-Blur"></div>
+       <div class="Background-Blur"><img src="./Assets/Cancel-Button.svg" alt="Cancel Btn"></div>
         <div id="ContenedorSets">
-            <div class="Expand-icon"><img src="./Assets/Expand Icon.svg" alt="Expand icon"><br>Edit</div>
+            <div class="Expand-icon" id="CloseDialogue"><img src="./Assets/Expand Icon.svg" alt="Expand icon"><br>Edit</div>
 
                 <video autoplay loop muted>
                     <source src="./Assets/UnionSpheres0001-0030.mp4" type="video/mp4">
@@ -103,6 +103,7 @@
  <!-- Conjunto 2 -->
         </div> 
         <div class="ButtonDiv"> 
+            <div class="Resultados-Help-Text" id="dialogo-audio"></div>
             <div id="btn3">
                 <div class="jelly"></div>
                 <svg width="0" height="0" class="jelly-maker">
@@ -114,9 +115,11 @@
                     </filter>
                   </defs>
                 </svg>
-                <p>Operate</p>
+                <p id="OperateDialogue">Operate</p>
             </div>
         </div>  
+       
+        <div class="Resultados-Help-Text" id="dialogo-especifico"></div>
         <div class="Resultados-Help-Text" id="Home-Dialogues">
         </div> 
 
@@ -436,6 +439,7 @@
    <script src="./Scripts/EventoEncogerButton.js" ></script>
    <script src="./Scripts/Filtro.js" ></script>
    <script src="./Scripts/Dialogos.js"></script>
+   <script src="./Scripts/DialgoAudio.js"></script>
    <script src="./Scripts/CopyButton.js"></script>
    <script src="./Scripts/Menu.js"></script>
 
