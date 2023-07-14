@@ -1,0 +1,210 @@
+html {
+    font-size: 16px;
+    font-family: 'PrincipalFont',sans-serif;
+  }
+body{
+    background-color: #090909;
+}
+.Grid-Container{
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    gap: 5rem;
+    padding: 5rem;
+}
+.Container-AddBtn-SetCard{
+
+}
+.Set-Grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    overflow: auto;
+    height:  80vh;
+    margin-top: 1rem;
+}
+.Add-New-Set-Element{
+    font-family: 'GentleMonster';
+    padding: 1rem;
+    background-color: #1A1A1A;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 2rem;
+}
+.Add-New-Set-Element:hover{
+    opacity: 0.5;
+}
+.Set-Card{
+    font-family: sans-serif;
+    font-size: 2rem;
+    background-color: #1A1A1A;
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+}
+.Set-Card .Header{
+    display: flex;
+    justify-content: space-between;
+}
+.Set-Card .Header .Set-Name{
+    transform: scale(0.5);
+    opacity: 0;
+}
+.Div-para-CloseBtn{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    font-family: sans-serif;
+    font-size: 2rem;
+    background-color: #1A1A1A;
+    color: white;
+    border-radius: 5px;
+    padding: 1rem;
+    height: 100%;
+    height: 10rem;
+}
+.even {
+    background-color: #DC2A5F;
+  }
+  
+  .odd {
+    background-color: #08d09f;
+  }
+.Close-Button {
+    height: 2rem;
+    width: 2rem;
+    margin: 0.5rem;
+    filter: invert(100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    align-self: self-end;
+  }
+  
+  .Close-Button:hover {
+    opacity: 0.5;
+  }
+  
+  .Close-Button img {
+    width: 35%;
+    height: 35%;
+  }
+.Grid-Set-Data{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+.Set-Name{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.Number-Set{
+    font-size: 1rem;
+    background-color: white;
+    color: black;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 100%;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+.Cardinality{
+    display: flex;
+    font-family: 'GentleMonster';
+    font-size: 0.8rem;
+}
+.Textbox{
+    height: 2rem;
+    width: fit-content;
+    border: 0.1rem solid white;
+    border-radius: 50px;
+    padding: 0rem 1rem;
+    background-color: transparent;
+    color: white;
+    align-self: end;
+  }
+  .Textbox:focus {
+    outline: none;}
+.Set-Data{
+    margin-left: 1rem;
+    font-size: 1rem;
+    overflow: auto;
+}
+.Set-Data img{
+    height: 0.5rem;
+    width: 0.5rem;
+    margin-right: 0.5rem;
+    filter: invert(100%);
+    padding: 0.25rem;
+    cursor: pointer;
+}
+.Set-Data img:hover{
+    border-radius: 100%;
+    background-color: white;
+    filter: none;
+}
+.Set-Data img:hover + span{
+    text-decoration: line-through;
+  }
+.Results-Grid{
+    background-color: #1A1A1A;
+    color: white;
+    opacity: 0.8;
+    line-height: 1.5; /* Espacio entre renglones */
+    overflow: auto;
+}
+.Operation-Title{
+    display: flex;
+    margin: 1rem;
+    align-items: center;
+}
+.Operation-Title img{
+    width: 1rem;
+    height: 1rem;
+    margin-right: 1rem;
+    background-color: white;
+    filter: invert(100%);
+    padding: 0.25rem;
+    border-radius: 2px;
+}
+.Container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    margin: 1rem;
+
+}
+.Grid-Operations{
+    background-color: #1A1A1A;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0.5rem;
+    width: fit-content;
+    border-radius: 5px;
+}
+.Symbol-Operator{
+    padding: 1rem;
+    background-color: black;
+    width: 1rem;
+    height: 1rem;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    transform: scale(0.9);
+    color: white;
+    cursor: pointer;
+  }
+  .Symbol-Operator:hover{
+    opacity: 0.5;
+  }
