@@ -1,28 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/helvetica-neue-9');
+
+@font-face {
+    font-family: 'PrincipalFont';
+    src: url('../Fonts/AndersonGrotesk.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'GentleMonster';
+    /* Asigna un nombre a la fuente */
+    src: url('../Fonts/gentlemonster-condensed.ttf') format('truetype');
+    /* Ruta relativa a la carpeta de fuentes */
+    /* Puedes agregar otros atributos opcionales como font-weight y font-style si la fuente los incluye */
+}
+
 html {
     font-size: 16px;
-    font-family: 'PrincipalFont',sans-serif;
-  }
-body{
-    background-color: #090909;
+    font-family: 'PrincipalFont', sans-serif;
 }
-.Grid-Container{
-    display: grid;
-    grid-template-columns: 40% 1fr;
+
+::-webkit-scrollbar {
+    width: 0.2em;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: black;
+}
+
+body {
+    background-color: #090909;
+    background-image: url('../Assets/VaperWare.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    object-fit:scale-down;
+    z-index: -2;
+    /* Para colocar el video detrás del contenido */
+    filter: blur(0px);
+}
+
+
+
+.Grid-Container {
+    display: flex;
     gap: 5rem;
     padding: 5rem;
+    flex-wrap: wrap;
+    justify-content: center;
 }
-.Container-AddBtn-SetCard{
 
+.Container-AddBtn-SetCard {
+    min-width: 25rem;
 }
-.Set-Grid{
+
+.Set-Grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
     overflow: auto;
-    height:  80vh;
+    height: 80vh;
     margin-top: 1rem;
+    border-radius: 5px;
 }
-.Add-New-Set-Element{
+
+.Add-New-Set-Element {
     font-family: 'GentleMonster';
     padding: 1rem;
     background-color: #1A1A1A;
@@ -31,10 +83,12 @@ body{
     cursor: pointer;
     height: 2rem;
 }
-.Add-New-Set-Element:hover{
+
+.Add-New-Set-Element:hover {
     opacity: 0.5;
 }
-.Set-Card{
+
+.Set-Card {
     font-family: sans-serif;
     font-size: 2rem;
     background-color: #1A1A1A;
@@ -44,15 +98,18 @@ body{
     flex-direction: column;
     height: fit-content;
 }
-.Set-Card .Header{
+
+.Set-Card .Header {
     display: flex;
     justify-content: space-between;
 }
-.Set-Card .Header .Set-Name{
+
+.Set-Card .Header .Set-Name {
     transform: scale(0.5);
     opacity: 0;
 }
-.Div-para-CloseBtn{
+
+.Div-para-CloseBtn {
     display: grid;
     grid-template-columns: auto 1fr;
     font-family: sans-serif;
@@ -64,13 +121,15 @@ body{
     height: 100%;
     height: 10rem;
 }
+
 .even {
     background-color: #DC2A5F;
-  }
-  
-  .odd {
+}
+
+.odd {
     background-color: #08d09f;
-  }
+}
+
 .Close-Button {
     height: 2rem;
     width: 2rem;
@@ -81,27 +140,30 @@ body{
     align-items: center;
     cursor: pointer;
     align-self: self-end;
-  }
-  
-  .Close-Button:hover {
+}
+
+.Close-Button:hover {
     opacity: 0.5;
-  }
-  
-  .Close-Button img {
+}
+
+.Close-Button img {
     width: 35%;
     height: 35%;
-  }
-.Grid-Set-Data{
+}
+
+.Grid-Set-Data {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
 }
-.Set-Name{
+
+.Set-Name {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
-.Number-Set{
+
+.Number-Set {
     font-size: 1rem;
     background-color: white;
     color: black;
@@ -112,12 +174,14 @@ body{
     align-content: center;
     justify-content: center;
 }
-.Cardinality{
+
+.Cardinality {
     display: flex;
     font-family: 'GentleMonster';
     font-size: 0.8rem;
 }
-.Textbox{
+
+.Textbox {
     height: 2rem;
     width: fit-content;
     border: 0.1rem solid white;
@@ -126,15 +190,19 @@ body{
     background-color: transparent;
     color: white;
     align-self: end;
-  }
-  .Textbox:focus {
-    outline: none;}
-.Set-Data{
+}
+
+.Textbox:focus {
+    outline: none;
+}
+
+.Set-Data {
     margin-left: 1rem;
     font-size: 1rem;
     overflow: auto;
 }
-.Set-Data img{
+
+.Set-Data img {
     height: 0.5rem;
     width: 0.5rem;
     margin-right: 0.5rem;
@@ -142,36 +210,67 @@ body{
     padding: 0.25rem;
     cursor: pointer;
 }
-.Set-Data img:hover{
+
+.Set-Data img:hover {
     border-radius: 100%;
     background-color: white;
     filter: none;
 }
-.Set-Data img:hover + span{
+
+.Set-Data img:hover+span {
     text-decoration: line-through;
-  }
-.Results-Grid{
+}
+
+.Results-Grid {
     background-color: #1A1A1A;
     color: white;
     opacity: 0.8;
-    line-height: 1.5; /* Espacio entre renglones */
+    line-height: 1.5;
+    /* Espacio entre renglones */
     overflow: auto;
+    max-width: 35rem;
+    width: 30rem;
+    min-width: 25rem;
+    padding: 2rem;
+    max-height: 80vh;
 }
-.Operation-Title{
+
+.Operation-Title {
     display: flex;
-    margin: 1rem;
     align-items: center;
+    text-transform: uppercase;
 }
-.Operation-Title img{
-    width: 1rem;
-    height: 1rem;
-    margin-right: 1rem;
-    background-color: white;
-    filter: invert(100%);
-    padding: 0.25rem;
-    border-radius: 2px;
+
+.Results-Grid .Number-Set {
+    border: #171717 3px solid;
 }
-.Container{
+
+.Results-Grid .Number-Set:first-of-type {
+    position: relative;
+}
+
+.Results-Grid .Number-Set:nth-of-type(2) {
+    left: -10px;
+    z-index: -1;
+    position: relative;
+}
+.Results-Grid .Number-Set:nth-of-type(3) {
+    left: -18px;
+    z-index: -2;
+    position: relative;
+    background-color: #090909;
+    color: white;
+    border: white 1px solid;
+    font-size: 0.6rem;
+}
+
+.Results-Values {
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+
+}
+
+.Container {
     display: flex;
     width: 100%;
     justify-content: center;
@@ -180,7 +279,8 @@ body{
     margin: 1rem;
 
 }
-.Grid-Operations{
+
+.Grid-Operations {
     background-color: #1A1A1A;
     display: flex;
     flex-wrap: wrap;
@@ -191,7 +291,8 @@ body{
     width: fit-content;
     border-radius: 5px;
 }
-.Symbol-Operator{
+
+.Symbol-Operator {
     padding: 1rem;
     background-color: black;
     width: 1rem;
@@ -204,7 +305,8 @@ body{
     transform: scale(0.9);
     color: white;
     cursor: pointer;
-  }
-  .Symbol-Operator:hover{
+}
+
+.Symbol-Operator:hover {
     opacity: 0.5;
-  }
+}
