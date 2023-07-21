@@ -665,7 +665,7 @@ function getSetNumber(setName) {
 
    // Ajustar la velocidad de reproducción del video al doble de lento
    video.addEventListener('loadedmetadata', () => {
-     video.playbackRate = 0.35; // Valor de 0.5 para el doble de lento (la velocidad original es 1)
+     video.playbackRate = 0.4; // Valor de 0.5 para el doble de lento (la velocidad original es 1)
    });
 
 

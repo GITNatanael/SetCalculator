@@ -22,3 +22,30 @@
   width: 3rem;
   height: 2rem;
 }
+
+#Audio-Container{
+  position: absolute;
+  z-index: 43;
+  background-color: #262626;
+  overflow: hidden;
+ width: 20rem;
+ height: 10rem;
+  transform: scale(0.2);
+  top: 0;
+  left: 0;
+}
+#Audio-Container img{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 44;
+}
+#Audio-Canvas{ 
+  height: 100%;
+  width: 100%;
+  background-color: green;
+  filter: blur(20px);
+}
+#Audio-clip{
+  
+}

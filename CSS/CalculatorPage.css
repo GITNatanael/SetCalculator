@@ -33,7 +33,7 @@ html {
 
 body {
     background-color: #090909;
-    background-image: url('../Assets/VaperWare.jpg');
+    background-image: url('../Assets/Background/Level_0.webp');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -43,14 +43,12 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: auto;
-    object-fit:scale-down;
+    height: 100%;
+    object-fit:cover;
     z-index: -2;
     /* Para colocar el video detrás del contenido */
     filter: blur(0px);
 }
-
-
 
 .Grid-Container {
     display: flex;
@@ -75,17 +73,25 @@ body {
 }
 
 .Add-New-Set-Element {
-    font-family: 'GentleMonster';
-    padding: 1rem;
+    font-family: 'GentleMonster'; 
     background-color: #1A1A1A;
     color: white;
     border-radius: 5px;
     cursor: pointer;
     height: 2rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem ;
+    align-items: center;
 }
 
 .Add-New-Set-Element:hover {
     opacity: 0.5;
+}
+.Add-New-Set-Element img{
+    width: 1.5rem;
+    height: 1.5rem;
+    filter: invert(1);
 }
 
 .Set-Card {
@@ -222,7 +228,8 @@ body {
 }
 
 .Results-Grid {
-    background-color: #1A1A1A;
+    backdrop-filter: blur(10px);
+    background-color: rgba(26, 26, 26, 0.7); 
     color: white;
     opacity: 0.8;
     line-height: 1.5;
@@ -231,8 +238,9 @@ body {
     max-width: 35rem;
     width: 30rem;
     min-width: 25rem;
-    padding: 2rem;
+    padding: 3rem;
     max-height: 80vh;
+    border-radius: 5px;
 }
 
 .Operation-Title {
@@ -242,7 +250,9 @@ body {
 }
 
 .Results-Grid .Number-Set {
-    border: #171717 3px solid;
+    backdrop-filter: blur(10px);
+    border: rgba(26, 26, 26, 1)  3px solid;
+ 
 }
 
 .Results-Grid .Number-Set:first-of-type {

@@ -32,15 +32,35 @@ function mostrarFraseAyudaAudio(dialogo, frase) {
   dialogo.textContent = frase;
 }
 
-// Evento click
-function reproducirMensajeEspecifico(event, mensaje, tiempoEspecifico) {
+// Función para mostrar el mensaje con elementos adicionales
+function mostrarMensajeEspecificoConElementos(event, mensaje, tiempoEspecifico) {
   dialogoAudio.style.display = "inline";
-  mostrarFraseAyudaAudio(dialogoAudio, mensaje);
+  const dialogo = mostrarFraseAyudaAudio(dialogoAudio, mensaje);
   reproducirAudioEspecifico(mensaje);
 
-  // Ocultar el diálogo después del tiempo especificado
+  // Crear los elementos adicionales
+  const audioContainer = document.createElement("div");
+  audioContainer.id = "Audio-Container";
+
+  const audioIcon = document.createElement("img");
+  audioIcon.src = "./Assets/Icons/Audio-Icon.png";
+  audioIcon.alt = "Audio Icon";
+
+  const audioCanvas = document.createElement("canvas");
+  audioCanvas.id = "Audio-Canvas";
+
+  const audioClip = document.createElement("audio");
+  audioClip.id = "Audio-clip";
+
+  audioContainer.appendChild(audioIcon);
+  audioContainer.appendChild(audioCanvas);
+  audioContainer.appendChild(audioClip);
+  dialogoAudio.appendChild(audioContainer);
+
+  // Ocultar el diálogo y los elementos después del tiempo especificado
   setTimeout(function() {
     dialogoAudio.style.display = "none";
+    audioContainer.style.display = "none";
     event.target.removeEventListener("click", reproducirMensajeHandler);
   }, tiempoEspecifico);
 }
@@ -48,9 +68,9 @@ function reproducirMensajeEspecifico(event, mensaje, tiempoEspecifico) {
 function reproducirMensajeHandler(event) {
   const boton = event.target;
   if (boton === boton1) {
-    reproducirMensajeEspecifico(event, "Puedes filtrar los resultados para solo visualizar las operaciones de tu interés a tu derecha, donde se ven varios botones con los nombres de cada operación. También puedes editar los conjuntos y rehacer las operaciones en el visualizador de la esquina.", 8000); // Tiempo específico: 8000 ms
+    mostrarMensajeEspecificoConElementos(event, "Puedes filtrar los resultados para solo visualizar las operaciones de tu interés a tu derecha, donde se ven varios botones con los nombres de cada operación. También puedes editar los conjuntos y rehacer las operaciones en el visualizador de la esquina.", 8000); // Tiempo específico: 8000 ms
   } else if (boton === boton2) {
-    reproducirMensajeEspecifico(event, "Para salir solo presiona cualquier parte alrededor", 5000); // Tiempo específico: 5000 ms
+    mostrarMensajeEspecificoConElementos(event, "Para salir solo presiona cualquier parte alrededor", 5000); // Tiempo específico: 5000 ms
   }
 }
 
