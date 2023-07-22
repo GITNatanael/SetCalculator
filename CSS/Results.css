@@ -75,16 +75,19 @@
     margin: 2rem 2rem;
     padding: 1rem 1rem;
     border-radius: 5px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    display: flex;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); 
 }
 #dialogo-especifico{
     display: none;
 }
 #dialogo-audio{
     display: none;
-    background-color: aquamarine;
+    background-color: #262626;
     z-index: 43;
+    gap: 1rem;
+}
+.Text-Container{
+    width: 100%; 
 }
 
 .Resultados-Column-Left{             /* Columna IZQUIERDA */

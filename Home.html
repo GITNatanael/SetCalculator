@@ -38,11 +38,7 @@
         <div class="Instructions" id="Instructions">
             <div class="top"> ONLINE SET CALCULATOR </div>
             <div class="bottom">NATE.HTML - <span class="copyright">&#169;</span>2023</div>
-       <div id="Audio-Container">
-        <img src="./Assets/Icons/Audio-Icon.png" alt="">
-        <canvas id="Audio-Canvas"></canvas>
-        <audio id="Audio-clip" ></audio>
-       </div>
+            
         </div>
        <div class="Background-Blur"><img src="./Assets/Cancel-Button.svg" alt="Cancel Btn"></div>
         <div id="ContenedorSets">
@@ -106,7 +102,14 @@
  <!-- Conjunto 2 -->
         </div> 
         <div class="ButtonDiv"> 
-            <div class="Resultados-Help-Text" id="dialogo-audio"></div>
+            <div class="Resultados-Help-Text" id="dialogo-audio">
+                <div id="Audio-Container">
+                    <img src="./Assets/Icons/Audio-Icon.png" alt="">
+                    <canvas id="Audio-Canvas"></canvas>
+                    <audio id="Audio-clip" ></audio>
+                </div>
+                <div class="Text-Container"></div>
+            </div>
             <div id="btn3">
                 <div class="jelly"></div>
                 <svg width="0" height="0" class="jelly-maker">
@@ -123,7 +126,8 @@
         </div>  
        
         <div class="Resultados-Help-Text" id="dialogo-especifico"></div>
-        <div class="Resultados-Help-Text" id="Home-Dialogues">
+        <div class="Resultados-Help-Text" id="Home-Dialogues"> 
+         
         </div> 
 
        
@@ -144,7 +148,7 @@
             <div class="Element" data-target="Producto-Cartesiano"><span class="unicode-character">&#x00D7;</span>  Producto Cartesiano</div>
         </div>
         
-        <div class="Resultados-Help-Text" id="dialogo">
+        <div class="Resultados-Help-Text" id="dialogo-audio">
         </div>
     </div> 
     <div class="Resultados-Column-Left">    <!-- Columna IZQUIERDA -->

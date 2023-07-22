@@ -1,4 +1,4 @@
-const audioContainer = document.getElementById('Audio-Container');
+/* const audioContainer = document.getElementById('Audio-Container');
 const audioCanvas = document.getElementById('Audio-Canvas');
 audioCanvas.width = window.innerWidth;
 audioCanvas.height = window.innerHeight;
@@ -43,4 +43,4 @@ audioContainer.addEventListener('click', function(){
 
     }
     animate();
-});
+}); */

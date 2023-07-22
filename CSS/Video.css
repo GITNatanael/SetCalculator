@@ -24,13 +24,13 @@
 }
 
 #Audio-Container{
-  position: absolute;
+  position: relative;
   z-index: 43;
   background-color: #262626;
   overflow: hidden;
- width: 20rem;
- height: 10rem;
-  transform: scale(0.2);
+  width: 2.5rem;
+  height: 1.25rem;
+  transform: scale(1);
   top: 0;
   left: 0;
 }
@@ -43,8 +43,8 @@
 #Audio-Canvas{ 
   height: 100%;
   width: 100%;
-  background-color: green;
-  filter: blur(20px);
+  background-color: #262626;
+  filter: blur(2px);
 }
 #Audio-clip{
   
