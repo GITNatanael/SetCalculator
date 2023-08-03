@@ -294,6 +294,16 @@ btn3.addEventListener('click', function () {             //Al hacer clic en el B
   funDisjointness();
   document.body.classList.add('change-background');//Se cambia el color de fondo, blanco a oscuro
 });
+const ReDo = document.getElementById('ReDo');//Botón rehacer
 
+ReDo.addEventListener('click', function () {                                                   //Se reproduce la animacion donde se desplaza a la pagina de "results"
+  funUnion();                                        //Se hace el calculo de la Union de conjuntos
+  funIntersection();                                //Se hace el calculo de la Interseccion
+  funSymmetricDifference();
+  funSetDifferenceA();
+  funSetDifferenceB();
+  funCartesianProduct();
+  funDisjointness(); 
+});
 
 

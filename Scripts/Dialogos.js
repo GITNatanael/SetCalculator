@@ -42,11 +42,11 @@ const boton1 = document.getElementById("OperateDialogue");
 const boton2 = document.getElementById("CloseDialogue");
 
 boton1.addEventListener("mouseover", function() {
-  mostrarMensajeEspecifico("Mensaje para el Botón 1", 8000); // Tiempo específico: 8000 ms
+  mostrarMensajeEspecifico("Cuando estés listo presiona Operar", 8000); // Tiempo específico: 8000 ms
 });
 
 boton2.addEventListener("mouseover", function() {
-  mostrarMensajeEspecifico("Mensaje para el Botón 2", 5000); // Tiempo específico: 5000 ms
+  mostrarMensajeEspecifico("Puedes editar el contenido de los conjuntos y rehacer las operaciónes aquí", 5000); // Tiempo específico: 5000 ms
 });
 
 // Mostrar una frase de ayuda recurrente inicialmente
