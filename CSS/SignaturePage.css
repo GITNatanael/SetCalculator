@@ -13,10 +13,19 @@
     /* Ruta relativa a la carpeta de fuentes */
     /* Puedes agregar otros atributos opcionales como font-weight y font-style si la fuente los incluye */
 }
+@font-face {
+    font-family: 'FacitRegular';
+    src: url('../Fonts/Facit\ Regular.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Inter';
+    src: url('../Fonts/Inter-Regular.ttf') format('opentype');
+}
+
 
 html {
     font-size: 16px;
-    font-family: 'PrincipalFont', sans-serif;
+    font-family: 'FacitRegular', sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -32,23 +41,9 @@ html {
 }
 
 body {
-    background-color: #090909;
-    background-image: url('../Assets/Background/Level_0.webp');
-    background-repeat: no-repeat;
-    background-size: cover;
+    transition: background-color 0.3s ease-in-out;
 }
-
-#video-background-Rain {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit:cover;
-    z-index: -2;
-    /* Para colocar el video detrás del contenido */
-    filter: blur(0px);
-}
+ 
 .Back-Button{
     background-color: white;
     height: 3rem;
@@ -60,4 +55,268 @@ body {
 }
 .Back-Button img{
     transform: scale(0.6);
+}
+.Flex{
+    display: flex;
+    flex-direction: column;
+}
+
+.Autor-info{
+    background-color: transparent;
+    color: white;
+    padding: 1rem;
+    height: 70vh;
+    font-family: 'Inter';
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.5;
+    position: relative;
+}
+.Sign-Logo{
+    height: 4rem;
+    width: 5.5rem;
+    background-color: transparent;
+    filter: invert(100%);
+    border-radius: 5px;
+    padding: 1rem;
+}
+.boton-correo {
+    display: inline-block;
+    padding: 0; 
+    height: fit-content; 
+    color: #fff;
+    text-decoration: none;
+    border-radius: 70px;
+  }
+.Mail-Button{
+    background-color: transparent;
+    border-radius: 70px; 
+    padding: 0.5rem 1rem;
+    border: 1px solid white; 
+} 
+.boton-correo:hover .Mail-Button{
+    background-color: rgba(255, 255, 255, 0.8)
+}
+.Social{ 
+    align-self: flex-start; 
+    padding-left: 2rem;
+    position: absolute;
+    bottom: 2rem; 
+}
+.Align-Center{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: white;
+    
+}
+.Insta-Icon{
+    height: 1rem;
+    width: 1rem;
+}
+.Text{
+    background-color: transparent;
+    text-transform: uppercase;
+    color: white;
+    font-size: 1.5rem;
+    padding: 0rem 5rem;
+    border-top: white 1px solid;
+    font-family: 'Inter';
+    font-size: 0.8rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar horizontalmente */
+    justify-content: flex-start; /* Alinear al inicio verticalmente */ 
+}
+.Copyright-div{
+    display: flex;
+    justify-content: space-between;
+    width: 100%; 
+    align-self: flex-start; /* Alinear al inicio verticalmente */
+            margin-top: 0; 
+    
+}
+.Instructions{
+    margin: 4rem 0; 
+}
+  
+.top {
+  font-weight: bold;
+    width: auto;
+  }
+  .copyright {
+    font-family: sans-serif;
+    font-size: 1.1rem;
+    }
+  .bottom {
+    width: auto;
+  }
+.CreativeC-Div{
+    width: 10rem;
+    font-size: 0.5rem; 
+    margin: 4rem 0;
+}
+.Thanks{
+    margin-top: 20%;
+    text-align: center; 
+}
+
+  .Content{
+    background-color: transparent;
+    height: 100%;
+    margin: 10rem;
+}
+.Header{
+    letter-spacing: 3.5px;
+    word-spacing: 10px; 
+}
+.Logo-usage{
+    background-color: transparent;
+    padding: 1rem;
+}
+.Logo-usage .Dark-Bg{
+    background-color: black;
+}
+.Logo-usage img{
+    margin-bottom: 1rem;
+}
+.Colors-usage{
+    background-color: transparent;
+    padding: 1rem;
+}
+.Colors-usage .Grid-2 div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.color-F1F1F1{
+    background-color: #F1F1F1;
+    height: 10rem;
+    width: 10rem;
+    border-radius: 100%;
+}
+.color-262626{
+    background-color: #262626;
+    height: 10rem;
+    width: 10rem;
+    border-radius: 100%;
+}
+.color-0B0B0B{
+    background-color: #0B0B0B;
+    height: 10rem;
+    width: 10rem;
+    border-radius: 100%;
+}
+.color-FFFFFF{
+    background-color: #FFFFFF;
+    height: 10rem;
+    width: 10rem;
+    border-radius: 100%;
+    border: black 1px solid;
+}
+.color-222B3D{
+    background-color: #222B3D;
+    height: 10rem;
+    width: 10rem;
+    border-radius: 100%;
+}
+.color-DC2A5F{
+    background-color: #DC2A5F;
+    height: 10rem;
+    width: 10rem;
+    border-radius: 100%;
+}
+.color-08D09F{
+    background-color: #08D09F;
+    height: 10rem;
+    width: 10rem;
+    border-radius: 100%;
+}
+.Typeface-usage{
+    background-color: transparent;
+    padding: 1rem;
+}
+.GentleMonster-font{
+    font-family: 'GentleMonster';
+}
+
+.AndersonGrotesk-font{
+    font-family: 'PrincipalFont';
+}
+.Font-Header{ 
+    font-size: 2rem;
+}
+.Typography-usage{
+    padding: 1rem;
+    background-color: transparent;
+
+}
+.Typography-usage .Grid-2{
+    align-items: baseline;
+}
+.Typography-usage .Grid-2 div{
+    display: flex;
+    flex-direction: column; 
+}
+.Header-Type{
+    font-family: 'PrincipalFont';
+    color: black;
+    font-size: 3.9em;
+    font-family: 'PrincipalFont', sans-serif;
+    z-index: 41; 
+}
+.Subheader-Type{
+    font-family: 'PrincipalFont';
+    font-size: 3rem;
+}
+.Text-Type{
+    font-family: 'PrincipalFont';
+}
+.btn3{
+    border: 0.1rem solid #F1F1F1;
+    background-color: #F1F1F1;
+    border-radius: 25px;
+    padding: 0.4rem 0.9rem;
+    color: #0F1417;
+    font-size: 0.7rem;
+    font-family: 'GentleMonster';
+    transition: padding 0.2s ease-in-out;
+    height: 1rem;
+    width: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Iconography-usage{
+    background-color: transparent;
+    padding: 1rem;
+}
+.Iconography-usage .Grid-2 div{ 
+    width: 5rem;
+    font-size: 10px;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+}
+.Iconography-usage img{
+    height: 4rem;
+    width: 4rem;
+}
+.Iconography-usage video{
+    height: 4rem;
+    width: 4rem;
+}
+.Grid-2{
+    display: flex;
+    margin: 2rem;
+    flex-wrap: wrap;
+    gap: 2rem;
+    
 }
