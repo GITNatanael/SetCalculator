@@ -142,10 +142,10 @@ body.change-background {
   transform: scaleX(-1);
   
 }
-@media screen and (max-width: 600px) {
-  #Grid2{  
-    
-   }
+@media screen and (max-width: 768px) {
+  body {
+    width: 100vw;     
+    }
   #ContenedorSets {
     transform: scale(0.5);
     max-width: 45rem;

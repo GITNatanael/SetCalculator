@@ -54,12 +54,15 @@ body {
     display: flex;
     gap: 5rem;
     padding: 5rem;
+    max-width: 90vw;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center; 
 }
 
 .Container-AddBtn-SetCard {
     min-width: 25rem;
+    max-width: 90vw;
 }
 
 .Set-Grid {
@@ -69,7 +72,7 @@ body {
     overflow: auto;
     height: 80vh;
     margin-top: 1rem;
-    border-radius: 5px;
+    border-radius: 5px; 
 }
 
 .Add-New-Set-Element {
@@ -102,7 +105,7 @@ body {
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    height: fit-content;
+    height: fit-content;  
 }
 
 .Set-Card .Header {
@@ -241,6 +244,7 @@ body {
     padding: 3rem;
     max-height: 80vh;
     border-radius: 5px;
+    max-width: 90vw;
 }
 
 .Operation-Title {
@@ -287,7 +291,7 @@ body {
     position: fixed;
     bottom: 0;
     margin: 1rem;
-
+    max-width: 90vw;
 }
 
 .Grid-Operations {
@@ -320,3 +324,37 @@ body {
 .Symbol-Operator:hover {
     opacity: 0.5;
 }
+@media screen and (max-width: 768px) {
+    body {
+      width: 100vw;   
+      margin-bottom: 5rem; 
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; 
+      padding-left: 1rem;
+      }
+      .Grid-Container {
+        max-width: 90vw; 
+      }
+      .Set-Grid { 
+        align-items: center;
+        justify-items: center;
+    }
+    
+.Set-Card { 
+    width: 90vw;
+    max-width: 90vw; 
+}
+.Container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    margin: 1rem;
+    max-width: 90vw;
+    margin-bottom: 2.5rem;
+}
+
+    }

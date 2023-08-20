@@ -318,6 +318,20 @@ body {
     display: flex;
     margin: 2rem;
     flex-wrap: wrap;
-    gap: 2rem;
-    
+    gap: 2rem;   
+}
+
+@media (max-width: 768px) {
+    body {
+    width: 100vw;     
+    }
+    .Text{
+        padding: 0rem 1rem;
+ }
+ .Content{ 
+    margin: 0rem;
+}
+.Logo-usage img{
+    width: 15rem;
+}
 }
