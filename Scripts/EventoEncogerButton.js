@@ -159,7 +159,7 @@ function encoger() {
 
 				ContenedorSets.css({
 					transition: "all 1.0s ease-in-out",
-					transform: "scale(0.3) translate(calc(100vw + 10%), calc(-100vh + 0%))",
+					transform: "scale(0.2) translate(calc(200vw + 10%), calc(-150vh + 0%))",
 					position: "fixed",
 					"z-index": "1",
 					"margin-right": "5rem",
@@ -180,13 +180,13 @@ function encoger() {
 						display: "flex",
 						"justify-content": "space-between",
 						width: "90vh",
-						transform: "scale(0.9) translate(0,calc(50vh - 100%))",
+						transform: "scale(0.5) translate(0,calc(50vh - 100%))",
 					});
 					tarjeta2.css({
-						transform: "scale(0.8) translate(-10px,0) ",
+						transform: "scale(1) translate(-10px,0) ",
 					});
 					tarjeta1.css({
-						transform: "scale(0.8) ",
+						transform: "scale(1) ",
 					});
 
 				});
@@ -196,7 +196,7 @@ function encoger() {
 						// El clic ocurrió fuera del ContenedorSets
 
 						ContenedorSets.css({
-							transform: "scale(0.3) translate(calc(100vw + 10%), calc(-100vh + 0%))",
+							transform: "scale(0.2) translate(calc(200vw + 10%), calc(-150vh + 0%))",
 							width: "600px",
 							"margin-right": "5rem",
 						});
