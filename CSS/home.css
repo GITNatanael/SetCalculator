@@ -61,8 +61,7 @@ body.change-background {
     font-family: 'GentleMonster';
     height: auto;
     max-width: 400px;
-    min-width: 400px;
-    left: 0;
+    min-width: 400px; 
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
 }
@@ -143,9 +142,28 @@ body.change-background {
   
 }
 @media screen and (max-width: 768px) {
+  html{ 
+
+  }
   body {
-    width: 100vw;     
+    max-width:100vw;     
     }
+    #Grid2{ 
+    }
+
+    .Instructions{ 
+      font-size: 4rem;
+      font-family: 'GentleMonster';
+      height: auto;
+      max-width: 100%;
+      min-width: fit-content; 
+      opacity: 1;
+      transition: opacity 0.5s ease-in-out; 
+      display: flex; 
+      text-align: center;
+      margin-top: 2rem;
+  }
+ 
   #ContenedorSets {
     transform: scale(0.5);
     max-width: 45rem;
@@ -183,8 +201,9 @@ body.change-background {
       width: 100%;
       height: auto;
       display: flex;
-      flex-direction: row; 
-      justify-content: center;
+      flex-direction: column;  
+      align-items: center; 
+      transform: translateY(-80px);
 
   }
     
