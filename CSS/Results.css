@@ -264,71 +264,6 @@
   }
   
 
-
-/* Estilos para dispositivos celulares */
-@media (max-width: 768px) {
-    #ContenedorOperaciones{
-        padding: 0rem ; 
-       }
-    .Resultados-Column-Right{           /* Columna DERECHA */
-        margin: 1rem 1rem; 
-       width: 100px; 
-    }
-    .Expand-icon{
-        font-size: 2.5rem;
-      }
-      .Showing-now{
-        color: white;
-        padding: 0.5rem 1rem;
-        width: 100%;
-        font-size: 1rem;
-        height: auto;
-        display: flex;
-        justify-content: flex-end; 
-        text-align: end;
-    
-    }
-      .Resultados-Filter{ 
-        width: 100px;
-        position: absolute;
-        right: 0; 
-
-        
-    }
-      .Element{ 
-        padding: 0.25rem 0.5rem;  
-        font-size: 0.4rem; 
-      }
-    
-    .Resultados-Column-Left{             /* Columna IZQUIERDA */
-        width: 70vw; 
-
-    }
-    .Resultados-Grid-Superior{
- 
-        padding: 0 1rem; 
-    }
-    .Resultados-Grid-Inferior{
-        width: auto;
-        padding:1rem;
-    } 
-    .Tarjeta{                       
-        min-height: 15rem;
-        max-width: fit-content;
-        min-width: 100%;
-    }
-    .Resultados-Help-Text{
-        font-size: 0.7rem;
-        width: 150px;
-    }
-     .Texto-NombreOperacion{
-        font-size: 0.7rem;
-     }
-    
-  
-
-  }
-
   .Background-Blur{
     backdrop-filter: blur(2px); /* Ajusta el valor del desenfoque según tus necesidades */
     background-color: rgba(255, 255, 255, 0); /* Ajusta el valor de la opacidad según tus necesidades */
@@ -397,4 +332,68 @@
     animation: rotateAnimation 2s linear infinite; /* Ajusta la duración, timing function y dirección de la animación según tus preferencias */
   }
   
+  /* Estilos para dispositivos celulares */
+@media (max-width: 768px) {
+  #ContenedorOperaciones{
+      padding: 0rem ; 
+     }
+  .Resultados-Column-Right{           /* Columna DERECHA */
+      margin: 1rem 1rem; 
+     width: 100px; 
+  }
+  .Expand-icon{
+      font-size: 2.5rem;
+    }
+    .Showing-now{
+      color: white;
+      padding: 0.5rem 1rem;
+      width: 100%;
+      font-size: 1rem;
+      height: auto;
+      display: flex;
+      justify-content: flex-end; 
+      text-align: end;
   
+  }
+    .Resultados-Filter{ 
+      width: 100px;
+      position: absolute;
+      right: 0; 
+
+      
+  }
+    .Element{ 
+      padding: 0.25rem 0.5rem;  
+      font-size: 0.4rem; 
+    }
+  
+  .Resultados-Column-Left{             /* Columna IZQUIERDA */
+      width: 70vw; 
+
+  }
+  .Resultados-Grid-Superior{
+
+      padding: 0 1rem; 
+  }
+  .Resultados-Grid-Inferior{
+      width: auto;
+      padding:1rem;
+  } 
+  .Tarjeta{                       
+      min-height: 15rem;
+      max-width: fit-content;
+      min-width: 100%;
+  }
+  .Resultados-Help-Text{
+      font-size: 0.7rem;
+      width: 150px;
+  }
+   .Texto-NombreOperacion{
+      font-size: 0.7rem;
+   }
+  
+   #ReDo-Button-Div{
+ 
+    margin-bottom: 15vh;
+  } 
+}

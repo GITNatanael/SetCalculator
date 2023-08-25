@@ -213,7 +213,7 @@ function encoger() {
 
 					ContenedorSets.css({
 						transition: "all 1.0s ease-in-out",
-						transform: "scale(0.3) translate(calc(100vw + 10%), calc(-100vh + 0%))",
+						transform: "scale(0.2) translate(calc(200vw + 10%), calc(-150vh + 0%))",
 						position: "fixed",
 						"z-index": "3",
 						"margin-right": "5rem",
@@ -250,7 +250,7 @@ function encoger() {
 							// El clic ocurrió fuera del ContenedorSets
 
 							ContenedorSets.css({
-								transform: "scale(0.3) translate(calc(100vw + 10%), calc(-100vh + 0%))",
+								transform: "scale(0.2) translate(calc(200vw + 10%), calc(-150vh + 0%))",
 								width: "600px",
 								"margin-right": "5rem",
 							});
