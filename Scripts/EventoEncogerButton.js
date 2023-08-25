@@ -51,7 +51,7 @@ function encoger() {
 			transition: "all 1.0s ease-in-out",
 			transform: "scale(0.5) translate(calc(100vw - 50%), calc(-100vh + 50%))",
 			position: "fixed",
-			"z-index": "1",
+			"z-index": "3",
 			width: "600px",
 			"margin-right": "5rem",
 
@@ -161,7 +161,7 @@ function encoger() {
 					transition: "all 1.0s ease-in-out",
 					transform: "scale(0.2) translate(calc(200vw + 10%), calc(-150vh + 0%))",
 					position: "fixed",
-					"z-index": "1",
+					"z-index": "3",
 					"margin-right": "5rem",
 				});
 
@@ -215,7 +215,7 @@ function encoger() {
 						transition: "all 1.0s ease-in-out",
 						transform: "scale(0.3) translate(calc(100vw + 10%), calc(-100vh + 0%))",
 						position: "fixed",
-						"z-index": "1",
+						"z-index": "3",
 						"margin-right": "5rem",
 					});
 
