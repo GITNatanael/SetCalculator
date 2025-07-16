@@ -4,7 +4,7 @@ let cameraB,sceneB,rendererB, uniformsB;
 async function init2() {
   const container = document.getElementById('Contenedor_Derecho');
 
-  cameraB = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.25, 20);
+  cameraB = new THREE.PerspectiveCamera(55, window.innerWidth / window.innerHeight, 0.25, 20);
   cameraB.position.set(0, 0, 13.5);
   sceneB = new THREE.Scene();
 

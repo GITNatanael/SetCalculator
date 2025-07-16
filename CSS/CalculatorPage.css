@@ -36,6 +36,8 @@ body {
     background-image: url('../Assets/Background/Level_0.webp');
     background-repeat: no-repeat;
     background-size: cover;
+    padding-top: 2rem;
+    
 }
 
 #video-background {

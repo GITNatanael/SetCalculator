@@ -87,11 +87,11 @@ header{
     display: flex;
     padding: 0.5rem;
     right: 15%;
-    top: -2rem;
+    position: relative;
      
   }
   .UX-Logo{
-    height: 1.5rem;
+    height: 2rem;
     width: 2rem;
     align-self: flex-end;
   }
@@ -116,6 +116,11 @@ header{
       margin-right: 1rem;
     }
     .UXLogo-Ribbon{
-      margin: 0rem 2rem;
+      margin: 4rem 0rem   ;
+      transform: rotate(90deg);
     }
+    .UX-Logo{
+      transform: rotate(-90deg);
+    }
+
   }

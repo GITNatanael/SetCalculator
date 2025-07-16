@@ -1,10 +1,10 @@
 // Array de frases de ayuda
 const frasesAyuda = [
-  "¡Bienvenido! ¿En qué puedo ayudarte hoy?",
-  "Si tienes alguna pregunta, no dudes en preguntar.",
-  "Explora las opciones disponibles en el menú.",
-  "Recuerda guardar tus cambios antes de salir.",
-  "Si necesitas ayuda adicional, visita nuestra sección de preguntas frecuentes."
+  "Welcome! How can I help you today?",
+  "A set is a collection of distinct elements sharing a common characteristic",
+  "Explore the options available on the menu.",
+  "Tap one of the Sets.",
+  "Sets: where union creates connections, and difference showcases singularities."
 ];
 
 // Elementos de diálogo
